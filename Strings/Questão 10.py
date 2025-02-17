@@ -1,14 +1,12 @@
 # Questão 10
-# Faça a leitura de três valores e apresente como resultado a soma dos quadrados dos três valores e o quadrado da soma dos três valores.
+# Construa um programa que leia duas strings fornecidas pelo usuário e verifique se a segunda 
+# string lida está contida no final da primeira, retornando o resultado da verificação.
 
 # Solução do exercício
 
-a = float(input())
-b = float(input())
-c = float(input())
+s1 = input("")
+s2 = input("")
 
-soma_dos_quadrados = a**2 + b**2 + c**2
-quadrado_da_soma = (a + b + c)**2
+resultado = s2 in s1[-len(s2):]
 
-print(f"{soma_dos_quadrados:.2f}")
-print(f"{quadrado_da_soma:.2f}")
+print(resultado)

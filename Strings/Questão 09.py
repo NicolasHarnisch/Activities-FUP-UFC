@@ -1,11 +1,12 @@
 # Questão 09
-# Leia um ângulo em graus e apresente-o convertido em radianos. A fórmula de conversão é: R = G * π/180 , 
-# sendo G o ângulo em graus e R em radianos.
+# Escreva um programa que recebe do usuário uma string S, um caractere C, e uma posição I e devolve 
+# o índice da primeira posição da string onde foi encontrado o caractere C. A procura deve começar a partir da posição I.
 
 # Solução do exercício
 
-import math
+s = input("")
+c = input("")
+i = int(input(""))
 
-angulo_graus = float(input())
-angulo_radianos = angulo_graus * math.pi / 180
-print(f"{angulo_radianos:.2f}")
+print(s.find(c, i))
+    

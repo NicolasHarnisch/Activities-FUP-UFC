@@ -1,9 +1,13 @@
 # Quesão 08
-# Leia uma velocidade em km/h (quilômetros por hora) e apresente-a convertida em m/s (metros por segundo).
-# A fórmula de conversão é: M = K/3.6 , sendo K a velocidade em km/h e M em m/s.
+# Faça um programa em que troque todas as ocorrências de uma letra L1 pela letra L2 em uma string. 
+# A string e as letras L1 e L2 devem ser fornecidas pelo usuário.
 
 # Solução do exercício
 
-temperatura = float(input())
-temperatura = F = temperatura * (9.0/5.0) + 32.
-print(f"{temperatura:.2f}")
+texto = input("")
+letra1 = input("")
+letra2 = input("")
+
+texto_modificado = texto.replace(letra1, letra2)
+
+print(texto_modificado)

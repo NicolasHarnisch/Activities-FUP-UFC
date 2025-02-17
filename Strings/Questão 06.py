@@ -1,8 +1,9 @@
 # Questão 06
-# Faça um programa que leia um número real e imprima o resultado do quadrado desse número.
+# Escreva um programa para converter uma cadeia de caracteres de letras maiúsculas em letras minúsculas.
 
 # Solução do exercício
 
-numero = float(input())
-numero = numero**2
-print(f"{numero:.2f}")
+texto = input("")
+texto_minusculo = texto.lower()
+
+print(texto_minusculo)

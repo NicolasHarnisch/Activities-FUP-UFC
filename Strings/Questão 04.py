@@ -1,8 +1,10 @@
 # Questão 04
-# Leia o tamanho do lado de um quadrado e imprima como resultado a sua área.
+# Escreva um programa que recebe uma string S e inteiros não-negativos I e J e imprima o segmento S[I...J].
 
 # Solução do exercício
 
-lado = float(input())
-area = lado ** 2
-print(f"{area:.2f}")
+S = input().strip()
+I = int(input())
+J = int(input())
+
+print(S[I-1:J])
