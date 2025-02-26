@@ -1,10 +1,21 @@
 # Questão 01
-# Crie um programa que permita fazer a conversão cambial entre Dólares e Reais. Considere como taxa de câmbio US$ 1,00 = R$5,27.
-# Leia um valor em Dólares pelo teclado e mostre o correspondente em Reais.
+# Escreva um programa que:
+# ◦ Crie/abra um arquivo texto de nome “arq.txt”
+# ◦ Permita que o usuário grave diversas linhas nesse arquivo, até que o usuário entre com a linha ‘0’
+# ◦ Feche o arquivo
+# Agora, abra e leia o arquivo, e escreva na tela o conteúdo do arquivo.
 
 # Solução do exercício
 
-taxa_de_cambio = 5.27
-valor_reais = float(input())
-reais = valor_reais * taxa_de_cambio
-print(f'{reais:.2f}')
+with open('arq.txt', 'w') as arquivo:
+    while True:
+        linha = input()
+        if linha == '0':
+            break
+        arquivo.write(linha + '\n')
+    arquivo.close()
+    
+with open('arq.txt', 'r') as arquivo:
+    for linha in arquivo:
+        print(linha, end = '')
+    arquivo.close()
