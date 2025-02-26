@@ -1,8 +1,21 @@
 # Questão 06
-# Faça um programa que leia um número real e imprima o resultado do quadrado desse número.
+# Faça um programa que receba do usuário um arquivo texto e mostre na tela quantas vezes cada letra do alfabeto aparece dentro do arquivo. ]
+# Letras maiúsculas e minúsculas devem ser contadas juntas, e não separadamente.
 
 # Solução do exercício
 
-numero = float(input())
-numero = numero**2
-print(f"{numero:.2f}")
+letras = 'abcdefghijklmnopqrstuvwxyz'
+contletras = [0] * 26 
+arq = input()
+
+with open(arq, 'r', encoding='utf-8') as arquivo:
+    for linha in arquivo:
+        for letra in linha:
+            letra = letra.lower() 
+            for i in range(26):  
+                if letra == letras[i]:
+                    contletras[i] += 1
+                    break  
+
+for i in range(26):  
+    print(f'{letras[i]}: {contletras[i]}')

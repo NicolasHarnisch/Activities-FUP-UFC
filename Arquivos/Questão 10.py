@@ -1,14 +1,27 @@
 # Questão 10
-# Faça a leitura de três valores e apresente como resultado a soma dos quadrados dos três valores e o quadrado da soma dos três valores.
+# Faça um programa que receba o nome de um arquivo de entrada e outro de saída. O arquivo de entrada contém em cada linha o nome de uma cidade e o seu número de habitantes, separados por uma tabulação. 
+# O programa deverá ler o arquivo de entrada, armazenar os dados das cidades em uma lista de dicionários, e gerar um arquivo de saída onde aparece o nome da cidade mais populosa seguida pelo seu número de habitantes. 
+# Mostre na tela lista dos dicionários e o conteúdo desse arquivo de saída.
 
 # Solução do exercício
 
-a = float(input())
-b = float(input())
-c = float(input())
+arq = input()
+cidades = []
+maiorcidade = None
 
-soma_dos_quadrados = a**2 + b**2 + c**2
-quadrado_da_soma = (a + b + c)**2
+with open(arq, 'r') as arquivo:
+    for linha in arquivo:
+        nome_cidade, habitantes = linha.strip().split('\t')
+        habitantes = int(habitantes)
+        cidades.append({'nome': nome_cidade, 'habitantes': habitantes})
+        if maiorcidade is None or habitantes > maiorcidade['habitantes']:
+            maiorcidade = {'nome': nome_cidade, 'habitantes': habitantes}
 
-print(f"{soma_dos_quadrados:.2f}")
-print(f"{quadrado_da_soma:.2f}")
+with open(f'{arq}.out', 'w') as arquivo:
+    arquivo.write(f"{maiorcidade['nome']}\t{maiorcidade['habitantes']}\n")
+
+for cidade in cidades:
+    print(cidade)
+
+with open(f'{arq}.out', 'r') as arquivo:
+    print(arquivo.read().strip())

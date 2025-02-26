@@ -1,8 +1,21 @@
 # Questão 04
-# Leia o tamanho do lado de um quadrado e imprima como resultado a sua área.
+# Faça um programa que receba do usuário um arquivo texto e mostre na tela quantas letras são vogais e quantas são consoantes.
 
 # Solução do exercício
 
-lado = float(input())
-area = lado ** 2
-print(f"{area:.2f}")
+arq = input()
+vogais ='aeiouAEIOU'
+consoantes = 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ'
+contador1 = 0
+contador2 = 0
+
+with open(arq, 'r') as arquivo:
+    for linha in arquivo:
+        for letra in linha:
+            if letra in vogais:
+                contador1 += 1
+            elif letra in consoantes:
+                contador2 += 1
+    arquivo.close()
+print(contador1)
+print(contador2)

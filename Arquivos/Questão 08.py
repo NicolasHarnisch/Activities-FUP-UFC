@@ -1,9 +1,25 @@
 # Quesão 08
-# Leia uma velocidade em km/h (quilômetros por hora) e apresente-a convertida em m/s (metros por segundo).
-# A fórmula de conversão é: M = K/3.6 , sendo K a velocidade em km/h e M em m/s.
+# Faça um programa que leia o conteúdo de um arquivo e crie outro arquivo com o mesmo conteúdo, mas com todas as letras minúsculas convertidas para maiúsculas. 
+# Os nomes dos arquivos serão fornecidos, via teclado, pelo usuário. Escreva na tela o conteúdo dos dois arquivos, primeiro o do arquivo de entrada e depois o do arquivo de saída.
 
 # Solução do exercício
 
-temperatura = float(input())
-temperatura = F = temperatura * (9.0/5.0) + 32.
-print(f"{temperatura:.2f}")
+arq = input()
+arq2 = input()
+
+with open(arq, 'r') as arquivo:
+    for linha in arquivo:
+        for letra in linha:
+            with open(arq2, 'a') as arquivo2:
+                arquivo2.write(letra.upper())
+                arquivo2.close()
+    arquivo.close()
+
+with open(arq, 'r') as arquivo:
+    for linha in arquivo:
+        print(linha, end = '')
+    arquivo.close()
+with open(arq2, 'r') as arquivo:
+    for linha in arquivo:
+        print(linha, end = '')
+    arquivo.close()

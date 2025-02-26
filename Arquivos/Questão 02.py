@@ -1,11 +1,12 @@
 # Questão 02
-# Faça um programa que, a partir das medidas dos lados de um retângulo, lidos via teclado, calcule a área e o perímetro deste retângulo.
+# Faça um programa que receba do usuário um arquivo texto e mostre na tela quantas linhas esse arquivo possui.
 
 # Solução do exercício
 
-Base = float(input())
-Altura = float(input())
-Area = Base * Altura
-print ((f'{Area:.2f}'))
-Perimetro = 2 * Base + 2 * Altura
-print ((f'{Perimetro:.2f}'))
+contador = 0
+arq = input()
+with open(arq, 'r') as arquivo:
+    for linha in arquivo:
+        contador += 1
+    arquivo.close()
+print(contador)

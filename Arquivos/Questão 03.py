@@ -1,10 +1,15 @@
 # Questão 03
-# Leia um número inteiro e imprima o seu antecessor e o seu sucessor.
+# Faça um programa que receba do usuário um arquivo texto e mostre na tela quantas letras são vogais.
 
 # Solução do exercício
 
-Valor_digitado = int(input())                     
-Valor_antecessor = Valor_digitado - 1
-Valor_Sucessor = Valor_digitado + 1
-print(f'{Valor_antecessor}')
-print(f'{Valor_Sucessor}')
+def contar_vogais(arq):
+    contador = 0
+    with open(arq, 'r', encoding='utf-8') as arquivo:
+        for linha in arquivo:
+            for c in linha:
+                if c in "aeiouAEIOU":
+                    contador += 1
+    return contador
+
+print(contar_vogais(input()))

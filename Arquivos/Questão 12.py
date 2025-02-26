@@ -1,19 +1,33 @@
 # Questão 12
 
-# Faça um programa que receba um valor em R$ que será dividido entre três ganhadores de um concurso. Sendo que da quantia total:
-# ◦ O primeiro ganhador receberá 46%;
-# ◦ O segundo ganhador receberá 32%;
-# ◦ O terceiro receberá o restante;
-# Calcule e imprima a quantia ganha por cada um dos ganhadores.
+# Abra um arquivo texto, calcule e escreva na tela o número de caracteres, o número de linhas e o número de palavras neste arquivo. 
+# Também escreva na tela quantas vezes cada letra ocorre no arquivo (ignorando letras com acento). Obs.: palavras são separadas por um ou mais caracteres espaço, tabulação ou nova linha.
 
 # Solução do exercício
 
-valor_total = float(input())
+letras = 'abcdefghijklmnopqrstuvwxyz'
+contletras = [0]*26
+arq = input()
+contlinhas = 0
+contcaracteres = 0
+contpalavras = 0
 
-primeiro_ganhador = valor_total * 0.46
-segundo_ganhador = valor_total * 0.32
-terceiro_ganhador = valor_total - (primeiro_ganhador + segundo_ganhador)
+with open(arq, 'r') as arquivo:
+    for linha in arquivo:
+        contlinhas += 1
+        palavras = linha.split()
+        contpalavras += len(palavras)
+        for char in linha:
+            contcaracteres += 1
+            pos = 0
+            for l in letras:
+                if char.lower() == l:
+                    contletras[pos] += 1
+                    break
+                pos += 1
 
-print(f"{primeiro_ganhador:.2f}")
-print(f"{segundo_ganhador:.2f}")
-print(f"{terceiro_ganhador:.2f}")
+print(contcaracteres)
+print(contlinhas)
+print(contpalavras)
+for i in range(26):
+    print(f'{letras[i]}: {contletras[i]}')
