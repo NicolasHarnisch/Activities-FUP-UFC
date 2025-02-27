@@ -35,11 +35,3 @@ Este repositório contém atividades desenvolvidas na disciplina de **Fundamento
 
 ## 🎯 Objetivo  
 Este repositório tem como propósito consolidar conceitos fundamentais de programação, utilizando apenas os recursos permitidos pela disciplina.  
-
-## 🚀 Como usar  
-Clone este repositório e execute os códigos em um ambiente compatível com Python.  
-
-```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
-python3 arquivo.py
