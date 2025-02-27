@@ -8,7 +8,7 @@ Este repositório contém atividades, exercícios e projetos desenvolvidos na di
 ✅ Aplicação de estruturas de controle, funções, matrizes e outros tópicos fundamentais  
 
 ## 💻 Tecnologias utilizadas  
-- **Linguagem**: Python (ou outra linguagem utilizada na disciplina)  
+- **Linguagem**: Python 
 - Conceitos de lógica de programação e estrutura de dados  
 
 ## 🚀 Objetivo  
