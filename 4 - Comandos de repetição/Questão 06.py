@@ -1,8 +1,10 @@
 # Questão 06
-# Faça um programa que leia um número real e imprima o resultado do quadrado desse número.
+# Faça um algoritmo que leia um número N, some todos os números inteiros de 1 a N, e mostre o resultado obtido.
 
 # Solução do exercício
 
-numero = float(input())
-numero = numero**2
-print(f"{numero:.2f}")
+N = int(input())
+soma = 0
+for i in range(1, N + 1):
+    soma += i
+print(soma)

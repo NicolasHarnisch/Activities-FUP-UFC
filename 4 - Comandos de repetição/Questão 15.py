@@ -1,14 +1,17 @@
 # Questão 15
-# Leia um valor inteiro positivo em segundos, e imprima-o em horas, minutos e segundos.
+# Faça uma função que, dado um valor N inteiro e positivo, calcule o valor de E, conforme a fórmula a seguir: E = 1 + 1/1! + 1/2! + 1/3! . . . 1/n!.
+
 
 # Solução do exercício
 
-segundos_totais = int(input())
+def fatorial(n):
+    f = 1
+    for i in range(1, n + 1):
+        f *= i
+    return f
 
-horas = segundos_totais // 3600
-minutos = (segundos_totais % 3600) // 60
-segundos = segundos_totais % 60
-
-print(horas)
-print(minutos)
-print(segundos)
+def funcao(n):
+    e = 1
+    for i in range(1, n + 1):
+        e += 1 / fatorial(i)
+    return e

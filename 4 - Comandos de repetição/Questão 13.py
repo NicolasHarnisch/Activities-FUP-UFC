@@ -1,15 +1,15 @@
 # Questão 13
-# Faça um programa que leia um número inteiro positivo de três dígitos (de 100 a 999). 
-# Gere outro número formado pelos dígitos invertidos do número lido. Exemplo: Número Lido = 123, Número Gerado = 321.
-
+# O número de Fibonacci Fn para n > 0 é definido da seguinte maneira:
+# ◦ F1 = 1
+# ◦ F2 = 1
+# ◦ Fn = Fn−1 + Fn−2 para n> 2
+# Faça uma função que receba um valor inteiro n e calcule e Fn.
 # Solução do exercício
 
-numero = int(input())
-
-centena = numero // 100
-dezena = (numero % 100) // 10
-unidade = numero % 10
-
-numero_invertido = (unidade * 100) + (dezena * 10) + centena
-
-print(numero_invertido)
+def funcao(n):
+    a, b = 1, 1
+    contador = 2
+    while contador < n:
+        a, b = b, a + b
+        contador += 1
+    return b if n > 1 else a

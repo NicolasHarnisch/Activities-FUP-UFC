@@ -1,10 +1,12 @@
 # Questão 11
-# Faça um programa que receba o salário de um funcionário. Calcule e imprima o valor do novo salário, 
-# sabendo que ele recebeu um aumento de 21,37 %.
+# Faça uma função que receba um valor inteiro n ≥ 0 e calcule o seu fatorial n!. Lembrete: 0! = 1.
 
 # Solução do exercício
 
-salario = float(input())
-novo_salario = salario * (1 + 21.37 / 100)
-print(f"{novo_salario:.2f}")
-
+def funcao(n):
+    fatorial = 1
+    contador = 1
+    while contador <= n:
+        fatorial *= contador
+        contador += 1
+    return fatorial

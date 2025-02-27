@@ -1,8 +1,7 @@
 # Questão 07
-# Faça um programa que leia a temperatura em graus Celsius e converta para Fahrenheit. Fórmula: F = C * (9.0/5.0) + 32.
+# Faça uma função que, dado um número real, e retorne o resultado do quadrado desse número.
 
 # Solução do exercício
 
-temperatura = float(input())
-temperatura = F = temperatura * (9.0/5.0) + 32.
-print(f"{temperatura:.2f}")
+def funcao(x):
+    return x ** 2

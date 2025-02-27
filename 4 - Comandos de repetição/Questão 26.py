@@ -1,9 +1,15 @@
-# Quesão 08
-# Leia uma velocidade em km/h (quilômetros por hora) e apresente-a convertida em m/s (metros por segundo).
-# A fórmula de conversão é: M = K/3.6 , sendo K a velocidade em km/h e M em m/s.
+# Quesão 26
+# Faça uma função que receba como parâmetro o ângulo x (em radianos) e um valor inteiro positivo n . 
+# Calcule o valor do seno desse ângulo usando a respectiva série de Taylor: sin(x) = x – x3/3! + x5/5! - … + (-1)n (x2n+1)/(2n+1)!.
 
 # Solução do exercício
 
-temperatura = float(input())
-temperatura = F = temperatura * (9.0/5.0) + 32.
-print(f"{temperatura:.2f}")
+def funcao(x, n):
+    
+    termo = x
+    soma = termo
+    for i in range(1, n + 1):
+        termo *= -x*x / ((2*i)*(2*i+1))
+        soma += termo
+        
+    return soma

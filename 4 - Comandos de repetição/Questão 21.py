@@ -1,10 +1,16 @@
-# Questão 03
-# Leia um número inteiro e imprima o seu antecessor e o seu sucessor.
+# Questão 21
+# Escreva uma função que gera um triângulo de altura n e lados 2 × n − 1 . Por exemplo, a saída para n = 6 seria:
+#      *
+#     ***
+#    *****
+#   *******
+#  *********
+# ***********
 
 # Solução do exercício
 
-Valor_digitado = int(input())                     
-Valor_antecessor = Valor_digitado - 1
-Valor_Sucessor = Valor_digitado + 1
-print(f'{Valor_antecessor}')
-print(f'{Valor_Sucessor}')
+def funcao(n):
+    for i in range(1, n + 1):
+        espacos = n - i
+        asteriscos = 2 * i - 1
+        print(' ' * espacos + '*' * asteriscos)

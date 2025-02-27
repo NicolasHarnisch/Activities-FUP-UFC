@@ -1,10 +1,8 @@
-# Questão 11
-# Faça um programa que receba o salário de um funcionário. Calcule e imprima o valor do novo salário, 
-# sabendo que ele recebeu um aumento de 21,37 %.
+# Questão 29
+# Faça um programa que leia um inteiro n ≥ 0 . Escreva n vezes a seguinte mensagem: “Estou sabendo Programar haha”.
 
 # Solução do exercício
 
-salario = float(input())
-novo_salario = salario * (1 + 21.37 / 100)
-print(f"{novo_salario:.2f}")
-
+n = int(input())
+for i in range(n):
+    print("Estou sabendo Programar haha")

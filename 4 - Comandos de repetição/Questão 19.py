@@ -1,10 +1,12 @@
-# Questão 01
-# Crie um programa que permita fazer a conversão cambial entre Dólares e Reais. Considere como taxa de câmbio US$ 1,00 = R$5,27.
-# Leia um valor em Dólares pelo teclado e mostre o correspondente em Reais.
-
+# Questão 19
+# Crie uma função que receba como parâmetro um valor inteiro e gere como saída n linhas como pontos de exclamação, conforme o exemplo abaixo (para n = 5).
+# !
+# !!
+# !!!
+# !!!!
+# !!!!!
 # Solução do exercício
 
-taxa_de_cambio = 5.27
-valor_reais = float(input())
-reais = valor_reais * taxa_de_cambio
-print(f'{reais:.2f}')
+def funcao(n):
+    for i in range(1, n + 1):
+        print('!' * i)

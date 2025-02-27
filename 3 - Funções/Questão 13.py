@@ -1,15 +1,15 @@
 # Questão 13
-# Faça um programa que leia um número inteiro positivo de três dígitos (de 100 a 999). 
-# Gere outro número formado pelos dígitos invertidos do número lido. Exemplo: Número Lido = 123, Número Gerado = 321.
+# Faça uma função que receba um valor em R$ que será dividido entre três ganhadores de um concurso. Sendo que da quantia total:
+# ◦ O primeiro ganhador receberá 46%;
+# ◦ O segundo ganhador receberá 32%;
+# ◦ O terceiro receberá o restante;
+# Calcule e retorne a quantia ganha por cada um dos ganhadores.
 
 # Solução do exercício
 
-numero = int(input())
-
-centena = numero // 100
-dezena = (numero % 100) // 10
-unidade = numero % 10
-
-numero_invertido = (unidade * 100) + (dezena * 10) + centena
-
-print(numero_invertido)
+def funcao(x):
+    ganhador1 = x * 46 / 100
+    ganhador2 = x * 32 / 100
+    ganhador3 = x - ganhador1 - ganhador2
+    
+    return ganhador1, ganhador2, ganhador3

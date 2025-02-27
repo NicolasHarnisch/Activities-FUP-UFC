@@ -1,8 +1,9 @@
 # Questão 04
-# Leia o tamanho do lado de um quadrado e imprima como resultado a sua área.
+# Faça uma função que, dado um número inteiro e retorne o seu antecessor e o seu sucessor.
 
 # Solução do exercício
 
-lado = float(input())
-area = lado ** 2
-print(f"{area:.2f}")
+def funcao(x):
+    antecessor = x - 1
+    sucessor = x + 1
+    return antecessor, sucessor

@@ -1,15 +1,13 @@
-# Questão 13
-# Faça um programa que leia um número inteiro positivo de três dígitos (de 100 a 999). 
-# Gere outro número formado pelos dígitos invertidos do número lido. Exemplo: Número Lido = 123, Número Gerado = 321.
+# Questão 31
+# Implemente um programa que leia duas strings, str1 e str2, e um valor inteiro positivo N. Concatene N vezes a string str2 ao final da string str1.
 
 # Solução do exercício
 
-numero = int(input())
+str1 = input()
+str2 = input()
+n = int(input())
 
-centena = numero // 100
-dezena = (numero % 100) // 10
-unidade = numero % 10
+for i in range(n):
+    str1 += str2
 
-numero_invertido = (unidade * 100) + (dezena * 10) + centena
-
-print(numero_invertido)
+print(str1)

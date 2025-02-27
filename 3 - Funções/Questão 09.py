@@ -1,11 +1,9 @@
 # Questão 09
-# Leia um ângulo em graus e apresente-o convertido em radianos. A fórmula de conversão é: R = G * π/180 , 
-# sendo G o ângulo em graus e R em radianos.
+# Crie uma função que, dada uma velocidade em km/h (quilômetros por hora) e retorne-a convertida em m/s (metros por segundo). 
+# A fórmula de conversão é: M = K/3.6, sendo K a velocidade em km/h e M em m/s.
 
 # Solução do exercício
 
-import math
-
-angulo_graus = float(input())
-angulo_radianos = angulo_graus * math.pi / 180
-print(f"{angulo_radianos:.2f}")
+def funcao(x):
+    m = x / 3.6
+    return m

@@ -1,14 +1,11 @@
 # Questão 10
-# Faça a leitura de três valores e apresente como resultado a soma dos quadrados dos três valores e o quadrado da soma dos três valores.
+# Crie uma função que, dado um ângulo em graus, retorne-o convertido em radianos. A fórmula de conversão é: R = G * π/180 ,
+# sendo G o ângulo em graus e R em radianos.
 
 # Solução do exercício
 
-a = float(input())
-b = float(input())
-c = float(input())
+import math
 
-soma_dos_quadrados = a**2 + b**2 + c**2
-quadrado_da_soma = (a + b + c)**2
-
-print(f"{soma_dos_quadrados:.2f}")
-print(f"{quadrado_da_soma:.2f}")
+def funcao(x):
+    r = x * math.pi / 180
+    return r

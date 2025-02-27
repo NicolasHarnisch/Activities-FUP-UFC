@@ -1,10 +1,9 @@
 # Questão 03
-# Leia um número inteiro e imprima o seu antecessor e o seu sucessor.
+# Faça um programa que peça ao usuário para digitar 10 valores e mostre a soma deles.
 
 # Solução do exercício
 
-Valor_digitado = int(input())                     
-Valor_antecessor = Valor_digitado - 1
-Valor_Sucessor = Valor_digitado + 1
-print(f'{Valor_antecessor}')
-print(f'{Valor_Sucessor}')
+soma = 0
+for i in range(10):
+    soma += float(input())
+print(f"{soma:.2f}")

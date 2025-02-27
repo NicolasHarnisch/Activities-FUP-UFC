@@ -1,16 +1,12 @@
 # Questão 14
-# Leia um número inteiro de 4 dígitos (de 1000 a 9999) e imprima 1 dígito por linha.
+# Em Matemática, o número harmônico designado por H(n) define-se como sendo a soma da série harmônica: H(n) = 1/1 + 1/2 + 1/3 … 1/n. 
+# Faça uma função que, dado um valor n inteiro positivo, calcule o valor de H(n).
 
 # Solução do exercício
 
-numero = int(input())
+def funcao(n):
+    harmonicNumber = 0
+    for i in range(1,n+1):
 
-milhar = numero // 1000
-centena = (numero % 1000) // 100
-dezena = (numero % 100) // 10
-unidade = numero % 10
-
-print(milhar)
-print(centena)
-print(dezena)
-print(unidade)
+        harmonicNumber += 1/i
+    return harmonicNumber

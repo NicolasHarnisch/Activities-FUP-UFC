@@ -1,16 +1,12 @@
-# Questão 14
-# Leia um número inteiro de 4 dígitos (de 1000 a 9999) e imprima 1 dígito por linha.
+# Questão 32
+# Faça um programa que leia uma palavra e some 1 no valor ASCII de cada caractere da palavra. Imprima a string resultante.
 
 # Solução do exercício
 
-numero = int(input())
+palavra = input()
+resultado = ""
 
-milhar = numero // 1000
-centena = (numero % 1000) // 100
-dezena = (numero % 100) // 10
-unidade = numero % 10
+for char in palavra:
+    resultado += chr(ord(char) + 1)
 
-print(milhar)
-print(centena)
-print(dezena)
-print(unidade)
+print(resultado)

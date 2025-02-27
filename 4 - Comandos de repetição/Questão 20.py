@@ -1,11 +1,16 @@
-# Questão 02
-# Faça um programa que, a partir das medidas dos lados de um retângulo, lidos via teclado, calcule a área e o perímetro deste retângulo.
-
+# Questão 20
+# Escreva uma função que gera um triângulo lateral de altura 2 × n − 1 e n de largura. Por exemplo, a saída para n = 4 seria:
+# *
+# **
+# ***
+# ****
+# ***
+# **
+# *
 # Solução do exercício
 
-Base = float(input())
-Altura = float(input())
-Area = Base * Altura
-print ((f'{Area:.2f}'))
-Perimetro = 2 * Base + 2 * Altura
-print ((f'{Perimetro:.2f}'))
+def funcao(n):
+    for i in range(1, n + 1):
+        print('*' * i)
+    for i in range(n - 1, 0, -1):
+        print('*' * i)

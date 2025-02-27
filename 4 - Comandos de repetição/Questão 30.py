@@ -1,19 +1,8 @@
-# Questão 12
-
-# Faça um programa que receba um valor em R$ que será dividido entre três ganhadores de um concurso. Sendo que da quantia total:
-# ◦ O primeiro ganhador receberá 46%;
-# ◦ O segundo ganhador receberá 32%;
-# ◦ O terceiro receberá o restante;
-# Calcule e imprima a quantia ganha por cada um dos ganhadores.
+# Questão 30
+# Faça um programa que receba uma palavra e a imprima de trás-para-frente.
 
 # Solução do exercício
 
-valor_total = float(input())
-
-primeiro_ganhador = valor_total * 0.46
-segundo_ganhador = valor_total * 0.32
-terceiro_ganhador = valor_total - (primeiro_ganhador + segundo_ganhador)
-
-print(f"{primeiro_ganhador:.2f}")
-print(f"{segundo_ganhador:.2f}")
-print(f"{terceiro_ganhador:.2f}")
+palavra = input()
+for i in range(len(palavra)-1, -1, -1):
+    print(palavra[i], end="")

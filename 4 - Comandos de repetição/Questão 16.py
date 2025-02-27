@@ -1,13 +1,11 @@
 # Questão 16
-# Escreva um programa que leia as coordenadas x e y de pontos no R2 e calcule sua distância da origem (0, 0).
+# Faça um programa que calcule e escreva o valor de S = 1/1 + 3/2 + 5/3 + 7/4 + … + 99/50.
 
 # Solução do exercício
 
-import math
-
-x = float(input())
-y = float(input())
-
-distancia = math.sqrt(x**2 + y**2)
-
-print(f"{distancia:.2f}")
+s = 0
+numerador = 1
+for denominador in range(1, 51):
+    s += numerador / denominador
+    numerador += 2
+print(f"{s:.10f}")

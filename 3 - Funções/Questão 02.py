@@ -1,11 +1,7 @@
 # Questão 02
-# Faça um programa que, a partir das medidas dos lados de um retângulo, lidos via teclado, calcule a área e o perímetro deste retângulo.
+# Crie uma função que permita fazer a conversão cambial de Dólares para Reais. Considere como taxa de câmbio US$ 1,0 = R$5,27.
 
 # Solução do exercício
 
-Base = float(input())
-Altura = float(input())
-Area = Base * Altura
-print ((f'{Area:.2f}'))
-Perimetro = 2 * Base + 2 * Altura
-print ((f'{Perimetro:.2f}'))
+def funcao(x):
+    return x*5.27

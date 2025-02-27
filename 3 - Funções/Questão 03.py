@@ -1,10 +1,9 @@
 # Questão 03
-# Leia um número inteiro e imprima o seu antecessor e o seu sucessor.
+# Faça uma função que, a partir das medidas dos lados de um retângulo, calcule a área e o perímetro deste retângulo.
 
 # Solução do exercício
 
-Valor_digitado = int(input())                     
-Valor_antecessor = Valor_digitado - 1
-Valor_Sucessor = Valor_digitado + 1
-print(f'{Valor_antecessor}')
-print(f'{Valor_Sucessor}')
+def funcao(lado1, lado2):
+    area = lado1 * lado2
+    perimetro = 2 * (lado1 + lado2)
+    return area, perimetro

@@ -1,13 +1,11 @@
 # Questão 16
-# Escreva um programa que leia as coordenadas x e y de pontos no R2 e calcule sua distância da origem (0, 0).
+# Faça uma função que receba um valor inteiro positivo em segundos, e retorne-o em horas, minutos e segundos.
 
 # Solução do exercício
 
-import math
-
-x = float(input())
-y = float(input())
-
-distancia = math.sqrt(x**2 + y**2)
-
-print(f"{distancia:.2f}")
+def funcao(x):
+    horas = x // 3600
+    minutos = (x % 3600) // 60
+    segundos_restantes = x % 60
+    
+    return horas, minutos, segundos_restantes

@@ -1,8 +1,10 @@
-# Questão 07
-# Faça um programa que leia a temperatura em graus Celsius e converta para Fahrenheit. Fórmula: F = C * (9.0/5.0) + 32.
+# Questão 25
+# Faça uma função que receba um inteiro n como parâmetro, calcule e retorne o resultado da seguinte série: S = 2/4 + 5/5 + 10/6 + … + (n2 + 1)/(n + 3)
 
 # Solução do exercício
 
-temperatura = float(input())
-temperatura = F = temperatura * (9.0/5.0) + 32.
-print(f"{temperatura:.2f}")
+def funcao(n):
+    soma = 0
+    for i in range(1, n + 1):
+        soma += (i**2 + 1) / (i + 3)
+    return soma

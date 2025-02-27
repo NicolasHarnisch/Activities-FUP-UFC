@@ -1,16 +1,9 @@
 # Questão 14
-# Leia um número inteiro de 4 dígitos (de 1000 a 9999) e imprima 1 dígito por linha.
+# Faça uma função que receba um número inteiro positivo de três dígitos (de 100 a 999). 
+# Retorne outro número formado pelos dígitos invertidos do número lido. Exemplo: Entrada = 123, Saída = 321.
 
 # Solução do exercício
 
-numero = int(input())
-
-milhar = numero // 1000
-centena = (numero % 1000) // 100
-dezena = (numero % 100) // 10
-unidade = numero % 10
-
-print(milhar)
-print(centena)
-print(dezena)
-print(unidade)
+def funcao(x):
+    numero_invertido = int(str(x)[::-1])
+    return numero_invertido
