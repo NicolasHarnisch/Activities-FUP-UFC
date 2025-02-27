@@ -1,13 +1,35 @@
 # Questão 16
-# Escreva um programa que leia as coordenadas x e y de pontos no R2 e calcule sua distância da origem (0, 0).
+# Elabore um programa que faça leitura de vários números inteiros, até que se digite um número negativo. O programa tem que retornar o maior e o menor número lido.
 
 # Solução do exercício
 
-import math
+def encontrar_maior_menor():
+    maior = None
+    menor = None
+    contador = 0
 
-x = float(input())
-y = float(input())
+    while True:
+        numero = int(input())
+        
+        if numero < 0:
+            if contador > 1:
+                print(maior)
+                print(menor)
+            elif contador == 1:
+                print(maior)
+                print(maior)
+            break
+        
+        if maior is None:
+            maior = numero
+        elif numero > maior:
+            maior = numero
+        
+        if menor is None:
+            menor = numero
+        elif numero < menor:
+            menor = numero
+        
+        contador += 1
 
-distancia = math.sqrt(x**2 + y**2)
-
-print(f"{distancia:.2f}")
+encontrar_maior_menor()

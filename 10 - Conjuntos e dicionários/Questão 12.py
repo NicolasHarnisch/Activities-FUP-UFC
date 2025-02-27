@@ -1,19 +1,38 @@
 # Questão 12
-
-# Faça um programa que receba um valor em R$ que será dividido entre três ganhadores de um concurso. Sendo que da quantia total:
-# ◦ O primeiro ganhador receberá 46%;
-# ◦ O segundo ganhador receberá 32%;
-# ◦ O terceiro receberá o restante;
-# Calcule e imprima a quantia ganha por cada um dos ganhadores.
+# Faça um programa que leia os dados de 10 alunos (Nome, matricula, Média Final), armazenando em um vetor. 
+# Uma vez lidos os dados, divida estes dados em 2 novos vetores, o vetor dos aprovados e o vetor dos reprovados, 
+# considerando a média mínima para a aprovação como sendo 5.0. Exibir na tela os dados do vetor de aprovados, seguido dos dados do vetor de reprovados.
 
 # Solução do exercício
 
-valor_total = float(input())
+def ler_alunos(qtd):
+    alunos = []
+    for _ in range(qtd):
+        nome = input()
+        matricula = int(input())
+        media = float(input())
+        alunos.append({"nome": nome, "matricula": matricula, "media": media})
+    return alunos
 
-primeiro_ganhador = valor_total * 0.46
-segundo_ganhador = valor_total * 0.32
-terceiro_ganhador = valor_total - (primeiro_ganhador + segundo_ganhador)
+def separar_aprovados_reprovados(alunos):
+    aprovados = []
+    reprovados = []
+    for aluno in alunos:
+        if aluno["media"] >= 5.0:
+            aprovados.append(aluno)
+        else:
+            reprovados.append(aluno)
+    return aprovados, reprovados
 
-print(f"{primeiro_ganhador:.2f}")
-print(f"{segundo_ganhador:.2f}")
-print(f"{terceiro_ganhador:.2f}")
+def exibir_alunos(lista):
+    for aluno in lista:
+        print(aluno)
+
+def main():
+    alunos = ler_alunos(10)
+    aprovados, reprovados = separar_aprovados_reprovados(alunos)
+    exibir_alunos(aprovados)
+    exibir_alunos(reprovados)
+
+if __name__ == "__main__":
+    main()

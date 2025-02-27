@@ -1,8 +1,17 @@
 # Questão 07
-# Faça um programa que leia a temperatura em graus Celsius e converta para Fahrenheit. Fórmula: F = C * (9.0/5.0) + 32.
+# Faça uma função recursiva que receba um número inteiro positivo par n e imprima todos os números pares de 0 até n em ordem crescente.
 
 # Solução do exercício
 
-temperatura = float(input())
-temperatura = F = temperatura * (9.0/5.0) + 32.
-print(f"{temperatura:.2f}")
+def funcao(x):
+    if x == 0:
+        print(0)
+    elif x % 2 == 0:
+        funcao(x - 2)
+        print(x)
+    else:
+        funcao(x - 1)
+
+# Pra rodar o Programa
+x = int(input(""))
+funcao(x)

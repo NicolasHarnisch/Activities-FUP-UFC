@@ -6,3 +6,8 @@
 def funcao(x):
     fahrenheit = x * (9.0 / 5.0) + 32
     return fahrenheit
+
+# Pra rodar o Programa
+x = float(input(""))
+y = funcao(x)
+print(f"{y:.2f}")

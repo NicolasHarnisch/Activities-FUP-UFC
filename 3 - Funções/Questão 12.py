@@ -7,3 +7,8 @@
 def funcao(x):
     novo_salario = x * (1 + 21.37 / 100)
     return novo_salario
+
+#pra rodar o programa
+x = float(input(""))
+y = funcao(x)
+print(f"{y:.2f}")

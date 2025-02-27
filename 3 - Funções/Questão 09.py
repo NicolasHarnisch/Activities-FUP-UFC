@@ -7,3 +7,8 @@
 def funcao(x):
     m = x / 3.6
     return m
+
+#pra rodar o programa
+x = float(input(""))
+y = funcao(x)
+print(f"{y:.2f}")

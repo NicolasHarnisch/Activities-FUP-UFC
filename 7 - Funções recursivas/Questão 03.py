@@ -1,10 +1,15 @@
 # Questão 03
-# Leia um número inteiro e imprima o seu antecessor e o seu sucessor.
+# Escreva uma função recursiva que calcule a soma dos primeiros n cubos: S(n) = 13 + 23 + … + n3.
 
 # Solução do exercício
 
-Valor_digitado = int(input())                     
-Valor_antecessor = Valor_digitado - 1
-Valor_Sucessor = Valor_digitado + 1
-print(f'{Valor_antecessor}')
-print(f'{Valor_Sucessor}')
+def funcao(x):
+    if x == 1:
+        return 1**3
+    else:
+        return x**3 + funcao(x - 1)
+
+# Pra rodar o Programa
+x = int(input(""))
+y = funcao(x)
+print(f"{y}")

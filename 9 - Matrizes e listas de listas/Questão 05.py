@@ -1,15 +1,23 @@
 # Questão 05
-# Elaborar um programa para calcular e imprimir o volume (V) de uma esfera e a área (A) de sua superfície, dado o valor de seu raio (R). 
-# A fórmula do volume da esfera é V = 4/3 πR3 e A = 4πR2 .
+# Leia uma matriz 5 × 5. Leia também um valor X. O programa deverá fazer uma busca desse valor na matriz e, ao final, 
+# escrever a localização (linha e coluna) ou uma mensagem de "Nao encontrado".
 
 # Solução do exercício
 
-import math
+matriz = [[int(input()) for _ in range(5)] for _ in range(5)]
 
-raio = float(input())
+n = int(input())
+encontrado = False
 
-volume = (4 / 3) * math.pi * (raio ** 3)
-area = 4 * math.pi * (raio ** 2)
+for i in range(5):
+    for j in range(5):
+        if matriz[i][j] == n:
+            print(i)
+            print(j)
+            encontrado = True
+            break
+    if encontrado:
+        break
 
-print(f"{volume:.2f}")
-print(f"{area:.2f}")
+if not encontrado:
+    print("Nao encontrado")

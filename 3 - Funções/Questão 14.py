@@ -7,3 +7,8 @@
 def funcao(x):
     numero_invertido = int(str(x)[::-1])
     return numero_invertido
+
+#pra rodar o programa
+x = int(input(""))
+y = funcao(x)
+print(f"{y:0}")

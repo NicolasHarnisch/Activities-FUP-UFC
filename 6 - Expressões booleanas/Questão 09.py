@@ -1,11 +1,17 @@
 # Questão 09
-# Leia um ângulo em graus e apresente-o convertido em radianos. A fórmula de conversão é: R = G * π/180 , 
-# sendo G o ângulo em graus e R em radianos.
+# Faça uma função que receba 2 números inteiros positivos e calcule o Mínimo Múltiplo Comum (MMC).
 
 # Solução do exercício
 
-import math
+def funcao(a, b):
+    maior = max(a, b)
+    while True:
+        if maior % a == 0 and maior % b == 0:
+            return maior
+        maior += 1
 
-angulo_graus = float(input())
-angulo_radianos = angulo_graus * math.pi / 180
-print(f"{angulo_radianos:.2f}")
+# Pra rodar o Programa
+x1 = int(input(""))
+x2 = int(input(""))
+y = funcao(x1, x2)
+print(f"{y}")

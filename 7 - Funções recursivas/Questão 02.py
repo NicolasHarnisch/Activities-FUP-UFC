@@ -1,11 +1,15 @@
 # Questão 02
-# Faça um programa que, a partir das medidas dos lados de um retângulo, lidos via teclado, calcule a área e o perímetro deste retângulo.
+# Faça uma função recursiva que calcule e retorne o fatorial de um número inteiro n.
 
 # Solução do exercício
 
-Base = float(input())
-Altura = float(input())
-Area = Base * Altura
-print ((f'{Area:.2f}'))
-Perimetro = 2 * Base + 2 * Altura
-print ((f'{Perimetro:.2f}'))
+def funcao(x):
+    if x == 0 or x == 1:
+        return 1
+    else:
+        return x * funcao(x - 1)
+
+# Pra rodar o Programa
+x = int(input(""))
+y = funcao(x)
+print(f"{y}")

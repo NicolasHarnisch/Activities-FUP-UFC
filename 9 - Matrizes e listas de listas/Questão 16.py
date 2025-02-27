@@ -1,13 +1,33 @@
 # Questão 16
-# Escreva um programa que leia as coordenadas x e y de pontos no R2 e calcule sua distância da origem (0, 0).
+# Faça um programa que carregue uma matriz 12 × 13 e divida todos os elementos de cada linha pelo maior elemento em módulo daquela linha. 
+# Escreva a matriz original e a modificada.
 
 # Solução do exercício
 
-import math
+matriz = []
 
-x = float(input())
-y = float(input())
+for i in range(12):
+    linha = []
+    for j in range(13):
+        linha.append(int(input()))
+    matriz.append(linha)
 
-distancia = math.sqrt(x**2 + y**2)
+for i in range(len(matriz)):
+    for j in range(len(matriz[i])):
+        print(f"{matriz[i][j]:.2f}", end=" ")
+    print()
 
-print(f"{distancia:.2f}")
+print()
+
+modificada = [linha[:] for linha in matriz]
+
+for i in range(len(modificada)):
+    maior = max(abs(num) for num in modificada[i])
+    
+    for j in range(len(modificada[i])):
+        modificada[i][j] /= maior
+
+for i in range(len(modificada)):
+    for j in range(len(modificada[i])):
+        print(f"{modificada[i][j]:.2f}", end=" ")
+    print()

@@ -1,10 +1,11 @@
 # Questão 01
-# Crie um programa que permita fazer a conversão cambial entre Dólares e Reais. Considere como taxa de câmbio US$ 1,00 = R$5,27.
-# Leia um valor em Dólares pelo teclado e mostre o correspondente em Reais.
+# Entre com um nome e imprima o nome somente se a primeira letra do nome for “a” (maiúscula ou minúscula).
 
 # Solução do exercício
 
-taxa_de_cambio = 5.27
-valor_reais = float(input())
-reais = valor_reais * taxa_de_cambio
-print(f'{reais:.2f}')
+def imprimir():
+    nome = input('')
+    if nome[0] == 'a' or nome[0] == 'A':
+        print(nome)
+
+imprimir()

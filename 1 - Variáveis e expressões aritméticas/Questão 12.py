@@ -1,5 +1,4 @@
 # Questão 12
-
 # Faça um programa que receba um valor em R$ que será dividido entre três ganhadores de um concurso. Sendo que da quantia total:
 # ◦ O primeiro ganhador receberá 46%;
 # ◦ O segundo ganhador receberá 32%;

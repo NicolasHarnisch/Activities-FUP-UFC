@@ -1,11 +1,21 @@
 # Questão 09
-# Leia um ângulo em graus e apresente-o convertido em radianos. A fórmula de conversão é: R = G * π/180 , 
-# sendo G o ângulo em graus e R em radianos.
+# Faça uma função recursiva que receba um número inteiro positivo n e retorne o superfatorial desse número. Exemplo de superfatorial: sf (4) = 1! * 2! * 3! * 4! = 288.
 
 # Solução do exercício
 
-import math
+def sf(x):
+    if x == 0 or x == 1:
+        return 1
+    else:
+        return fatorial(x) * sf(x - 1)
 
-angulo_graus = float(input())
-angulo_radianos = angulo_graus * math.pi / 180
-print(f"{angulo_radianos:.2f}")
+def fatorial(x):
+    if x == 0 or x == 1:
+        return 1
+    else:
+        return x * fatorial(x - 1)
+
+# Pra rodar o Programa
+x = int(input(""))
+y = sf(x)
+print(f"{y}")

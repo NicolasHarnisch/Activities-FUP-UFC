@@ -10,3 +10,13 @@ def funcao(x1, x2, x3, x4):
     x2 = (x2 / total_investido) * x4  
     x3 = (x3 / total_investido) * x4  
     return x1, x2, x3
+
+# Pra rodar o Programa
+x1 = float(input(""))
+x2 = float(input(""))
+x3 = float(input(""))
+x4 = float(input(""))
+y1,y2,y3 = funcao(x1,x2,x3,x4)
+print(f"{y1:.2f}")
+print(f"{y2:.2f}")
+print(f"{y3:.2f}")

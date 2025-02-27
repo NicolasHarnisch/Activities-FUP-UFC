@@ -10,3 +10,7 @@
 def funcao(n):
     for i in range(1, n + 1):
         print('!' * i)
+
+# Pra rodar o programa
+x = int(input(""))
+funcao(x)

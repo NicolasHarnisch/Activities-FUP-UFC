@@ -1,19 +1,15 @@
 # Questão 12
-
-# Faça um programa que receba um valor em R$ que será dividido entre três ganhadores de um concurso. Sendo que da quantia total:
-# ◦ O primeiro ganhador receberá 46%;
-# ◦ O segundo ganhador receberá 32%;
-# ◦ O terceiro receberá o restante;
-# Calcule e imprima a quantia ganha por cada um dos ganhadores.
+# Leia uma matriz 4 × 4. Calcule e imprima sua transposta. Não use comandos nem funções do python ou de suas bibliotecas que já façam isso.
 
 # Solução do exercício
 
-valor_total = float(input())
+matriz = [[int(input()) for _ in range(4)] for _ in range(4)]
 
-primeiro_ganhador = valor_total * 0.46
-segundo_ganhador = valor_total * 0.32
-terceiro_ganhador = valor_total - (primeiro_ganhador + segundo_ganhador)
+transposta = [[0] * 4 for _ in range(4)]
 
-print(f"{primeiro_ganhador:.2f}")
-print(f"{segundo_ganhador:.2f}")
-print(f"{terceiro_ganhador:.2f}")
+for i in range(4):
+    for j in range(4):
+        transposta[j][i] = matriz[i][j]
+
+for linha in transposta:
+    print(*linha)

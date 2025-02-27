@@ -1,10 +1,13 @@
 # Questão 11
-# Faça um programa que receba o salário de um funcionário. Calcule e imprima o valor do novo salário, 
-# sabendo que ele recebeu um aumento de 21,37 %.
+# Faça um programa para ler a nota de 15 alunos e armazene em um vetor, calcule e imprima a média geral.
 
 # Solução do exercício
 
-salario = float(input())
-novo_salario = salario * (1 + 21.37 / 100)
-print(f"{novo_salario:.2f}")
-
+notas = []
+for i in range(15):
+    notas.append(float(input()))
+soma = 0
+for nota in notas:
+    soma += nota
+media = soma / 15
+print(f"{media:.2f}")

@@ -10,3 +10,8 @@ def funcao(n):
         fatorial *= contador
         contador += 1
     return fatorial
+
+# Pra rodar o programa
+x = int(input(""))
+y = funcao(x)
+print(f"{y}")

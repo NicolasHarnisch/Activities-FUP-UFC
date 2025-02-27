@@ -1,8 +1,15 @@
 # Questão 07
-# Faça um programa que leia a temperatura em graus Celsius e converta para Fahrenheit. Fórmula: F = C * (9.0/5.0) + 32.
+# Leia o salário de um trabalhador e o valor da prestação de um empréstimo. 
+# Se a prestação for maior que 20% do salário então imprima: "Emprestimo nao concedido", caso contrário imprima: "Emprestimo concedido".
 
 # Solução do exercício
 
-temperatura = float(input())
-temperatura = F = temperatura * (9.0/5.0) + 32.
-print(f"{temperatura:.2f}")
+def verificar_emprestimo():
+    salario = float(input())
+    prestacao = float(input())
+    if prestacao > 0.2 * salario:
+        print("Emprestimo nao concedido")
+    else:
+        print("Emprestimo concedido")
+
+verificar_emprestimo()

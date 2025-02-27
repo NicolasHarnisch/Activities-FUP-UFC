@@ -1,11 +1,21 @@
 # Questão 02
-# Faça um programa que, a partir das medidas dos lados de um retângulo, lidos via teclado, calcule a área e o perímetro deste retângulo.
+# Leia um número n e crie uma matriz n×n. Preencha com 1 a diagonal principal e com 0 os demais elementos. Escreva ao final a matriz obtida. Use comandos de repetição.
 
 # Solução do exercício
 
-Base = float(input())
-Altura = float(input())
-Area = Base * Altura
-print ((f'{Area:.2f}'))
-Perimetro = 2 * Base + 2 * Altura
-print ((f'{Perimetro:.2f}'))
+def main():
+    n = int(input())
+    m = []
+    for i in range(n):
+        linha = []
+        for j in range(n):
+            if i == j:
+                linha.append(1)
+            else:
+                linha.append(0)
+        m.append(linha)
+    for i in range(n):
+        for j in range(n):
+            print(m[i][j], end=" ")
+        print()
+main()

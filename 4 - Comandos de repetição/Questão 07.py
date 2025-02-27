@@ -8,3 +8,8 @@ def funcao(N):
     for i in range(1, N + 1):
         soma += i
     return soma
+
+# Pra rodar o programa
+x = int(input(""))
+y = funcao(x)
+print(f"{y}")

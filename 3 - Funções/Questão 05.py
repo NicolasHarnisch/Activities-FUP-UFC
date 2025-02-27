@@ -6,3 +6,8 @@
 def funcao(x):
     area = x ** 2
     return area
+
+# Pra rodar o Programa
+x = float(input(""))
+y = funcao(x)
+print(f"{y:.2f}")

@@ -1,10 +1,21 @@
 # Questão 01
-# Crie um programa que permita fazer a conversão cambial entre Dólares e Reais. Considere como taxa de câmbio US$ 1,00 = R$5,27.
-# Leia um valor em Dólares pelo teclado e mostre o correspondente em Reais.
+# Faça um função que receba a data atual (dia, mês e ano em inteiro) e exiba-a na tela no formato textual por extenso. 
+# Exemplo: Data: 01/01/2000 , imprimir: 1 de janeiro de 2000.
 
 # Solução do exercício
 
-taxa_de_cambio = 5.27
-valor_reais = float(input())
-reais = valor_reais * taxa_de_cambio
-print(f'{reais:.2f}')
+def funcao(data):
+    partes = data.split('/')
+    dia = int(partes[0])
+    mes = int(partes[1])
+    ano = int(partes[2])
+    
+    meses = ["janeiro", "fevereiro", "marco", "abril", "maio", "junho",
+             "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
+    
+    return str(dia) + " de " + meses[mes - 1] + " de " + str(ano)
+
+# Pra rpodar o programa
+x = input("")
+y = funcao(x)
+print(f"{y}")

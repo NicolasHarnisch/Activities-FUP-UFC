@@ -9,3 +9,10 @@ def funcao(x):
     segundos_restantes = x % 60
     
     return horas, minutos, segundos_restantes
+
+#pra rodar o programa
+x = int(input(""))
+y1,y2,y3 = funcao(x)
+print(f"{y1}")
+print(f"{y2}")
+print(f"{y3}")

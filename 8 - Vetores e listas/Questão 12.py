@@ -1,19 +1,27 @@
 # Questão 12
-
-# Faça um programa que receba um valor em R$ que será dividido entre três ganhadores de um concurso. Sendo que da quantia total:
-# ◦ O primeiro ganhador receberá 46%;
-# ◦ O segundo ganhador receberá 32%;
-# ◦ O terceiro receberá o restante;
-# Calcule e imprima a quantia ganha por cada um dos ganhadores.
+# Faça uma uma função que receba um vetor com a nota de 15 alunos e e retorne tanto a média geral quanto o desvio padrão (populacional).
 
 # Solução do exercício
 
-valor_total = float(input())
+import math
 
-primeiro_ganhador = valor_total * 0.46
-segundo_ganhador = valor_total * 0.32
-terceiro_ganhador = valor_total - (primeiro_ganhador + segundo_ganhador)
+def funcao(x):
+    soma = 0
+    for nota in x:
+        soma += nota
+    media = soma / 15
 
-print(f"{primeiro_ganhador:.2f}")
-print(f"{segundo_ganhador:.2f}")
-print(f"{terceiro_ganhador:.2f}")
+    soma_quad = 0
+    for nota in x:
+        soma_quad += (nota - media) ** 2
+    desvio = math.sqrt(soma_quad / 15)
+
+    return media, desvio
+
+# Pra rodar o programa
+x = []
+for i in range(15):
+    x.append(float(input("")))
+y1, y2 = funcao(x)
+print(f"{y1:.2f}")
+print(f"{y2:.2f}")

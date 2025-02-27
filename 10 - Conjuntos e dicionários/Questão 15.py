@@ -1,14 +1,19 @@
 # Questão 15
-# Leia um valor inteiro positivo em segundos, e imprima-o em horas, minutos e segundos.
+# Faça um programa que leia um vetor com dados de 5 livros: título, autor e ano. Procure um livro por título, perguntando ao usuário qual título deseja buscar. 
+# Mostre os dados de todos os livros encontrados. O título procurado não precisa ser exato, ou seja, os livros encontrados devem ser aqueles que contêm o título buscado.
 
 # Solução do exercício
 
-segundos_totais = int(input())
+livros = []
 
-horas = segundos_totais // 3600
-minutos = (segundos_totais % 3600) // 60
-segundos = segundos_totais % 60
+for _ in range(5):
+    titulo = input().strip()
+    autor = input().strip()
+    ano = int(input().strip())
+    livros.append({'titulo': titulo, 'autor': autor, 'ano': ano})
 
-print(horas)
-print(minutos)
-print(segundos)
+busca = input().strip().lower()
+
+for livro in livros:
+    if busca in livro['titulo'].lower():
+        print(livro)

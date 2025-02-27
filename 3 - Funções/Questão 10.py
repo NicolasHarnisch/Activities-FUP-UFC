@@ -9,3 +9,8 @@ import math
 def funcao(x):
     r = x * math.pi / 180
     return r
+
+#pra rodar o programa
+x = float(input(""))
+y = funcao(x)
+print(f"{y:.2f}")

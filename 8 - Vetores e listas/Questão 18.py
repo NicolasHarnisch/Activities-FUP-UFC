@@ -1,35 +1,22 @@
 # Questão 18
-# Escreva um programa que receba como entrada o valor do saque realizado pelo cliente de um banco e retorne quantas notas de cada valor 
-# serão necessárias para atender ao saque com a menor quantidade de notas possível. Serão utilizadas notas de 100, 50, 20, 10, 5, 2 e 1 real.
+# Faça uma função que receba dois vetores, A e B, de mesmo tamanho. Crie um novo vetor denominado C calculando C = A – B (a diferença elemento a elemento). Retorne o vetor C.
 
 # Solução do exercício
 
-valor_saque = int(input())
+def funcao(x1, x2):
+    x3 = []
+    
+    for i in range(len(x1)):  
+        x3.append(x1[i] - x2[i])  
+    
+    return x3
 
-notas_100 = valor_saque // 100
-valor_saque %= 100
-
-notas_50 = valor_saque // 50
-valor_saque %= 50
-
-notas_20 = valor_saque // 20
-valor_saque %= 20
-
-notas_10 = valor_saque // 10
-valor_saque %= 10
-
-notas_5 = valor_saque // 5
-valor_saque %= 5
-
-notas_2 = valor_saque // 2
-valor_saque %= 2
-
-notas_1 = valor_saque // 1
-
-print(f"{notas_100}")
-print(f"{notas_50}")
-print(f"{notas_20}")
-print(f"{notas_10}")
-print(f"{notas_5}")
-print(f"{notas_2}")
-print(f"{notas_1}")
+# Pra rodar o programa
+x1 = []
+for i in range(5):
+    x1.append(int(input("")))
+x2 = []
+for i in range(5):
+    x2.append(int(input("")))
+y = funcao(x1, x2)
+print(y)

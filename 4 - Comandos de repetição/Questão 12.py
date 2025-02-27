@@ -18,3 +18,9 @@ def funcao(n, k):
     
     c = z/(t*uru)
     return c
+
+# Pra rodar o programa
+x1 = int(input(""))
+x2 = int(input(""))
+y = funcao(x1, x2)
+print(f"{y}")

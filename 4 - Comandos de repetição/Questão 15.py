@@ -15,3 +15,8 @@ def funcao(n):
     for i in range(1, n + 1):
         e += 1 / fatorial(i)
     return e
+
+# Pra rodar o programa
+x = int(input(""))
+y = funcao(x)
+print(f"{y:.8f}")

@@ -14,3 +14,8 @@ def funcao(p):
     fatorial_p = fatorial(p)
     soma = sum(int(digito) for digito in str(fatorial_p))
     return soma
+
+# Pra rodar o programa
+x = int(input(""))
+y = funcao(x)
+print(f"{y}")

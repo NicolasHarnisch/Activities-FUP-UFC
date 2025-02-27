@@ -14,3 +14,7 @@ def funcao(n):
         print('*' * i)
     for i in range(n - 1, 0, -1):
         print('*' * i)
+
+# Pra rodar o programa
+x = int(input(""))
+funcao(x)

@@ -12,3 +12,8 @@ def funcao(n):
         numero += 2
         contador += 1
     return soma
+
+# Pra rodar o programa
+x = int(input(""))
+y = funcao(x)
+print(f"{y}")

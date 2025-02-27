@@ -10,3 +10,9 @@ def funcao(x, n):
         resultado *= x
         contador += 1
     return resultado
+
+# Pra rodar o programa
+x1 = int(input(""))
+x2 = int(input(""))
+y = funcao(x1, x2)
+print(f"{y}")

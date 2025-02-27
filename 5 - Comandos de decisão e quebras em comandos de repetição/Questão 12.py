@@ -1,19 +1,24 @@
 # Questão 12
-
-# Faça um programa que receba um valor em R$ que será dividido entre três ganhadores de um concurso. Sendo que da quantia total:
-# ◦ O primeiro ganhador receberá 46%;
-# ◦ O segundo ganhador receberá 32%;
-# ◦ O terceiro receberá o restante;
-# Calcule e imprima a quantia ganha por cada um dos ganhadores.
+# Faça um programa que leia um valor digitado pelo usuário e imprima os resultados com base na tabela.
+# ◦ 1: Bom Dia - Boa Tarde - Boa Noite
+# ◦ 2: Por Favor :) - Com Licença :D - Muito Obrigado ;)
+# ◦ 3: Por Gentileza - Você poderia - Desculpe
+# ◦ 4: Boa Sorte - Tenha Fé
+# ◦ Outro: Estudar vale muito a pena não é !?
 
 # Solução do exercício
 
-valor_total = float(input())
+def respostas(valor):
+    if valor == 1:
+        print("Bom Dia - Boa Tarde - Boa Noite")
+    elif valor == 2:
+        print("Por Favor :) - Com Licenca :D - Muito Obrigado ;)")
+    elif valor == 3:
+        print("Por Gentileza - Voce poderia - Desculpe")
+    elif valor == 4:
+        print("Boa Sorte - Tenha Fe")
+    else:
+        print("Estudar vale muito a pena!")
 
-primeiro_ganhador = valor_total * 0.46
-segundo_ganhador = valor_total * 0.32
-terceiro_ganhador = valor_total - (primeiro_ganhador + segundo_ganhador)
-
-print(f"{primeiro_ganhador:.2f}")
-print(f"{segundo_ganhador:.2f}")
-print(f"{terceiro_ganhador:.2f}")
+valor = int(input())
+respostas(valor)

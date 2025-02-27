@@ -9,3 +9,10 @@ def funcao(x1, x2, x3):
     
     return soma_quadrados, quadrado_soma
 
+# Pra rodar o Programa
+x1 = float(input(""))
+x2 = float(input(""))
+x3 = float(input(""))
+y1,y2 = funcao(x1, x2, x3)
+print(f"{y1:.2f}")
+print(f"{y2:.2f}")

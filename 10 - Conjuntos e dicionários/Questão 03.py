@@ -1,10 +1,20 @@
 # Questão 03
-# Leia um número inteiro e imprima o seu antecessor e o seu sucessor.
+# Construa um dicionário com as seguintes informações de alunos: nome, número de matrícula e curso. Leia do usuário a informação de n alunos, 
+# armazene em um vetor e imprima os dados na tela.
 
 # Solução do exercício
 
-Valor_digitado = int(input())                     
-Valor_antecessor = Valor_digitado - 1
-Valor_Sucessor = Valor_digitado + 1
-print(f'{Valor_antecessor}')
-print(f'{Valor_Sucessor}')
+def main():
+    alunos = []
+    n = int(input())
+    for _ in range(n):
+        nome = input().strip()
+        matricula = int(input().strip())
+        curso = input().strip()
+        aluno = {'nome': nome, 'matricula': matricula, 'curso': curso}
+        alunos.append(aluno)
+    for aluno in alunos:
+        print(aluno)
+
+if __name__ == "__main__":
+    main()

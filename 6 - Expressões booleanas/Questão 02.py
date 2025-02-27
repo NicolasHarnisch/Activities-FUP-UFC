@@ -1,11 +1,14 @@
 # Questão 02
-# Faça um programa que, a partir das medidas dos lados de um retângulo, lidos via teclado, calcule a área e o perímetro deste retângulo.
+# Faça um programa que receba do usuário uma string. O programa imprime a string sem suas vogais.
 
 # Solução do exercício
 
-Base = float(input())
-Altura = float(input())
-Area = Base * Altura
-print ((f'{Area:.2f}'))
-Perimetro = 2 * Base + 2 * Altura
-print ((f'{Perimetro:.2f}'))
+def imprimir():
+    string = input()
+    resultado = ""
+    for letra in string:
+        if letra not in 'aeiouAEIOU':
+            resultado += letra
+    print(resultado)
+
+imprimir()

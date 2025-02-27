@@ -1,9 +1,17 @@
 # Quesão 08
-# Leia uma velocidade em km/h (quilômetros por hora) e apresente-a convertida em m/s (metros por segundo).
-# A fórmula de conversão é: M = K/3.6 , sendo K a velocidade em km/h e M em m/s.
+# Escreva uma função recursiva SomaSerie(i,j,k). Esta função devolve a soma da série de valores no intervalo [i,j], com incremento k.
 
 # Solução do exercício
 
-temperatura = float(input())
-temperatura = F = temperatura * (9.0/5.0) + 32.
-print(f"{temperatura:.2f}")
+def SomaSerie(x1, x2, x3):
+    if x1 > x2:
+        return 0
+    else:
+        return x1 + SomaSerie(x1 + x3, x2, x3)
+
+# Pra rodar o Programa
+x1 = int(input(""))
+x2 = int(input(""))
+x3 = int(input(""))
+y = SomaSerie(x1, x2, x3)
+print(f"{y}")

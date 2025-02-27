@@ -1,10 +1,13 @@
 # Questão 03
-# Leia um número inteiro e imprima o seu antecessor e o seu sucessor.
+# Crie um programa que lê 6 valores inteiros e, em seguida, mostre na tela os valores lidos.
 
 # Solução do exercício
 
-Valor_digitado = int(input())                     
-Valor_antecessor = Valor_digitado - 1
-Valor_Sucessor = Valor_digitado + 1
-print(f'{Valor_antecessor}')
-print(f'{Valor_Sucessor}')
+valores = []
+
+for i in range(6):
+    numero = int(input())
+    valores.append(numero)
+
+for valor in valores:
+    print(valor)

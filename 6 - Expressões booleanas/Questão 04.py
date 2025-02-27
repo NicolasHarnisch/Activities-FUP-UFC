@@ -1,8 +1,13 @@
 # Questão 04
-# Leia o tamanho do lado de um quadrado e imprima como resultado a sua área.
+# Faça um programa para verificar se um determinado número inteiro é divisível por 3 ou por 5, mas não simultaneamente pelos dois.
 
 # Solução do exercício
 
-lado = float(input())
-area = lado ** 2
-print(f"{area:.2f}")
+num = int(input())
+
+if num % 3 == 0 and num%5 != 0:
+    print ('True')
+elif num % 3 != 0 and num%5 == 0:
+    print ('True')
+else:
+    print('False')

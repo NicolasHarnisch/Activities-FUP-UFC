@@ -1,16 +1,30 @@
 # Questão 14
-# Leia um número inteiro de 4 dígitos (de 1000 a 9999) e imprima 1 dígito por linha.
+# Faça um programa que leia duas matrizes A e B de tamanho 4 × 5 cada uma. Calcule a matriz C = A + B. 
+# Não use comandos nem funções do python ou de suas bibliotecas que já façam isso.
 
 # Solução do exercício
 
-numero = int(input())
+matriz_a = []
+matriz_b = []
+matriz_c = []
 
-milhar = numero // 1000
-centena = (numero % 1000) // 100
-dezena = (numero % 100) // 10
-unidade = numero % 10
+for i in range(4):
+    linha = []
+    for j in range(5):
+        linha.append(int(input()))
+    matriz_a.append(linha)
 
-print(milhar)
-print(centena)
-print(dezena)
-print(unidade)
+for i in range(4):
+    linha = []
+    for j in range(5):
+        linha.append(int(input()))
+    matriz_b.append(linha)
+
+for i in range(4):
+    linha = []
+    for j in range(5):
+        linha.append(matriz_a[i][j] + matriz_b[i][j])
+    matriz_c.append(linha)
+
+for linha in matriz_c:
+    print(*linha)

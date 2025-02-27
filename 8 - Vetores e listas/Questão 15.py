@@ -1,14 +1,13 @@
 # Questão 15
-# Leia um valor inteiro positivo em segundos, e imprima-o em horas, minutos e segundos.
+# Faça um programa que leia um vetor de 10 posições e verifique se existem valores iguais, se sim escreva esses valores na tela.
 
 # Solução do exercício
 
-segundos_totais = int(input())
+vetor = []
+for _ in range(10):
+    vetor.append(int(input()))
 
-horas = segundos_totais // 3600
-minutos = (segundos_totais % 3600) // 60
-segundos = segundos_totais % 60
-
-print(horas)
-print(minutos)
-print(segundos)
+for i in range(10):
+    for j in range(i + 1, 10):
+        if vetor[i] == vetor[j]:
+            print(vetor[i])

@@ -13,3 +13,8 @@ def funcao(n):
         a, b = b, a + b
         contador += 1
     return b if n > 1 else a
+
+# Pra rodar o programa
+x = int(input(""))
+y = funcao(x)
+print(f"{y}")

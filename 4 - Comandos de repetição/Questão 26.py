@@ -13,3 +13,9 @@ def funcao(x, n):
         soma += termo
         
     return soma
+
+# Pra rodar o programa
+x1 = float(input(""))
+x2 = int(input(""))
+y = funcao(x1, x2)
+print(f"{y:.8f}")

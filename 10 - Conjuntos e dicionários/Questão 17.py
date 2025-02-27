@@ -1,20 +1,33 @@
 # Questão 17
-# Três amigos jogaram na loteria. Caso eles ganhem, o prêmio deve ser repartido proporcionalmente ao valor que cada deu para a realização da aposta. 
-# Faça um programa que leia quanto cada apostador investiu, o valor do prêmio, e imprima quanto cada um ganharia do prêmio com base no valor investido.
+# questãoFaça um programa que controla o consumo de energia dos eletrodomésticos de uma casa e:
+# ◦ Crie e leia 5 eletrodomésticos que contêm nome (máximo 15 letras), potência (real, em kW) e tempo ativo por dia (real, em horas).
+# ◦ Leia um tempo t (em dias), calcule e mostre o consumo total (em kWh) na casa e o consumo relativo de cada eletrodoméstico (consumo/consumo total) nesse período de tempo. Apresente este último dado em porcentagem.
 
 # Solução do exercício
 
-investimento1 = float(input())
-investimento2 = float(input())
-investimento3 = float(input())
-premio = float(input())
+devices = {}
 
-total_investido = investimento1 + investimento2 + investimento3
+for _ in range(5):
+    nome = input().strip()
+    potencia = float(input().strip())
+    tempo_ativo = float(input().strip())
+    devices[nome] = {
+        'potencia': potencia,
+        'tempo_ativo': tempo_ativo
+    }
 
-parte1 = (investimento1 / total_investido) * premio
-parte2 = (investimento2 / total_investido) * premio
-parte3 = (investimento3 / total_investido) * premio
+tempo_dias = int(input().strip())
+consumo_total = 0
 
-print(f"{parte1:.2f}")
-print(f"{parte2:.2f}")
-print(f"{parte3:.2f}")
+for nome in devices:
+    consumo = devices[nome]['potencia'] * devices[nome]['tempo_ativo'] * tempo_dias
+    devices[nome]['consumo'] = consumo
+    consumo_total += consumo
+
+# Exibe o consumo total
+print(f"{consumo_total:.2f}")
+
+# Exibe o consumo percentual de cada dispositivo
+for nome in devices:
+    perc = (devices[nome]['consumo'] / consumo_total) * 100
+    print(f"{nome}: {perc:.2f}")

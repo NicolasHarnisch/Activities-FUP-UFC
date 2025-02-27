@@ -1,11 +1,13 @@
 # Questão 02
-# Faça um programa que, a partir das medidas dos lados de um retângulo, lidos via teclado, calcule a área e o perímetro deste retângulo.
+# Faça um programa que receba um número inteiro e imprima se o número é par ou ímpar.
 
 # Solução do exercício
 
-Base = float(input())
-Altura = float(input())
-Area = Base * Altura
-print ((f'{Area:.2f}'))
-Perimetro = 2 * Base + 2 * Altura
-print ((f'{Perimetro:.2f}'))
+def par_ou_impar():
+    n = int(input())
+    if n % 2 == 0:
+        print("Par")
+    else:
+        print("Impar")
+
+par_ou_impar()

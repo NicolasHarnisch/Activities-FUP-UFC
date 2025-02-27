@@ -1,15 +1,21 @@
 # Questão 05
-# Elaborar um programa para calcular e imprimir o volume (V) de uma esfera e a área (A) de sua superfície, dado o valor de seu raio (R). 
-# A fórmula do volume da esfera é V = 4/3 πR3 e A = 4πR2 .
+# Ler um conjunto de números reais, armazenando-o em vetor e calcular o quadrado das componentes deste vetor, armazenando o resultado em outro vetor. Os conjuntos têm 10 elementos cada. Imprimir todos os conjuntos.
 
 # Solução do exercício
 
-import math
+vetor = []
 
-raio = float(input())
+for i in range(10):
+    numero = float(input())
+    vetor.append(numero)
 
-volume = (4 / 3) * math.pi * (raio ** 3)
-area = 4 * math.pi * (raio ** 2)
+vetor_quadrado = []
+for i in range(10):
+    quadrado = vetor[i] * vetor[i]
+    vetor_quadrado.append(quadrado)
 
-print(f"{volume:.2f}")
-print(f"{area:.2f}")
+for valor in vetor:
+    print(f"{valor:.2f}")
+
+for valor in vetor_quadrado:
+    print(f"{valor:.2f}")

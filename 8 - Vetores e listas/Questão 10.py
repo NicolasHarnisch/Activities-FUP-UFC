@@ -1,14 +1,13 @@
 # Questão 10
-# Faça a leitura de três valores e apresente como resultado a soma dos quadrados dos três valores e o quadrado da soma dos três valores.
+# Leia um vetor de 20 inteiros e atribua 0 para todos os elementos que possuírem valores negativos.
 
 # Solução do exercício
 
-a = float(input())
-b = float(input())
-c = float(input())
-
-soma_dos_quadrados = a**2 + b**2 + c**2
-quadrado_da_soma = (a + b + c)**2
-
-print(f"{soma_dos_quadrados:.2f}")
-print(f"{quadrado_da_soma:.2f}")
+vetor = []
+for i in range(20):
+    vetor.append(int(input()))
+for i in range(20):
+    if vetor[i] < 0:
+        vetor[i] = 0
+for valor in vetor:
+    print(valor)

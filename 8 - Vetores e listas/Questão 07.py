@@ -1,8 +1,21 @@
 # Questão 07
-# Faça um programa que leia a temperatura em graus Celsius e converta para Fahrenheit. Fórmula: F = C * (9.0/5.0) + 32.
+# Leia um vetor com 15 posições. Contar e escrever os valores pares desse vetor.
 
 # Solução do exercício
 
-temperatura = float(input())
-temperatura = F = temperatura * (9.0/5.0) + 32.
-print(f"{temperatura:.2f}")
+vetor = []
+
+for i in range(15):
+    numero = int(input())
+    vetor.append(numero)
+
+par = []
+
+for valor in vetor:
+    if valor % 2 == 0:
+        par.append(valor)
+
+print(len(par))
+
+for p in par:
+    print(p)

@@ -1,35 +1,31 @@
 # Questão 18
-# Escreva um programa que receba como entrada o valor do saque realizado pelo cliente de um banco e retorne quantas notas de cada valor 
-# serão necessárias para atender ao saque com a menor quantidade de notas possível. Serão utilizadas notas de 100, 50, 20, 10, 5, 2 e 1 real.
+# Faça um programa que gerencie o estoque de um mercado e:
+# ◦ Crie e leia um vetor de 5 produtos, com os dados: código (inteiro), nome (máximo 15 letras), preço e quantidade.
+# ◦ Leia um pedido, composto por um código de produto e a quantidade. Localize este código no vetor e, se houver quantidade suficiente para atender ao pedido integralmente, atualize o estoque e informe o usuário. Repita este processo até ler um código igual a zero. Se, por algum motivo não for possível atender ao pedido, mostre uma mensagem informando que é “Impossivel atender ao pedido, produto sem estoque suficiente” ou “Impossivel atender ao pedido, codigo nao encontrado”.
+# ◦ A cada passo, antes de ler o código, imprima o estoque do mercado.
 
 # Solução do exercício
 
-valor_saque = int(input())
+eletrodomesticos = []
 
-notas_100 = valor_saque // 100
-valor_saque %= 100
+for i in range(5):
+    eletrodomestico = {}
+    eletrodomestico['nome'] = input()
+    eletrodomestico['potencia'] = float(input())
+    eletrodomestico['tempo ativo por dia'] = float(input())
+    eletrodomesticos.append(eletrodomestico)
+tempo = int(input())
+soma = 0
 
-notas_50 = valor_saque // 50
-valor_saque %= 50
+for eletro in eletrodomesticos:
+    unico = eletro['potencia'] * eletro['tempo ativo por dia'] * tempo
+    eletro['consumo'] = unico
+    soma += unico
+    
+print(f'{soma:.2f}')    
 
-notas_20 = valor_saque // 20
-valor_saque %= 20
-
-notas_10 = valor_saque // 10
-valor_saque %= 10
-
-notas_5 = valor_saque // 5
-valor_saque %= 5
-
-notas_2 = valor_saque // 2
-valor_saque %= 2
-
-notas_1 = valor_saque // 1
-
-print(f"{notas_100}")
-print(f"{notas_50}")
-print(f"{notas_20}")
-print(f"{notas_10}")
-print(f"{notas_5}")
-print(f"{notas_2}")
-print(f"{notas_1}")
+for eletro in eletrodomesticos:
+    nome = eletro['nome']
+    consumo = eletro['consumo']
+    consumo_relativo = (consumo/soma) *100
+    print(f'{nome}: {consumo_relativo:.2f}')

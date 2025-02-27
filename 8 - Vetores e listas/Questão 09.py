@@ -1,11 +1,22 @@
 # Questão 09
-# Leia um ângulo em graus e apresente-o convertido em radianos. A fórmula de conversão é: R = G * π/180 , 
-# sendo G o ângulo em graus e R em radianos.
+# Faça um programa que receba do usuário um vetor com 10 inteiros. Em seguida deverá ser mostrado na tela o maior e o menor valor desse vetor.
 
 # Solução do exercício
 
-import math
+vetor = []
 
-angulo_graus = float(input())
-angulo_radianos = angulo_graus * math.pi / 180
-print(f"{angulo_radianos:.2f}")
+for i in range(10):
+    numero = int(input())
+    vetor.append(numero)
+
+maior = vetor[0]
+menor = vetor[0]
+
+for valor in vetor:
+    if valor > maior:
+        maior = valor
+    if valor < menor:
+        menor = valor
+
+print(maior)
+print(menor)

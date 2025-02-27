@@ -1,14 +1,13 @@
 # Questão 10
-# Faça a leitura de três valores e apresente como resultado a soma dos quadrados dos três valores e o quadrado da soma dos três valores.
+# Leia uma matriz 4 × 4. Calcule a soma dos elementos que estão na diagonal principal. 
+# Use apenas um comando de repetição. Não use comandos nem funções do python ou de suas bibliotecas que já façam isso.
 
 # Solução do exercício
 
-a = float(input())
-b = float(input())
-c = float(input())
+matriz = [[int(input()) for _ in range(4)] for _ in range(4)]
 
-soma_dos_quadrados = a**2 + b**2 + c**2
-quadrado_da_soma = (a + b + c)**2
+soma = 0
+for i in range(4):
+    soma += matriz[i][i]
 
-print(f"{soma_dos_quadrados:.2f}")
-print(f"{quadrado_da_soma:.2f}")
+print(soma)

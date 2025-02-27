@@ -1,13 +1,25 @@
 # Questão 16
-# Escreva um programa que leia as coordenadas x e y de pontos no R2 e calcule sua distância da origem (0, 0).
+# Faça uma função que receba um vetor e retorne um outro vetor, contendo apenas os elementos que não aparecem repetidos.
 
 # Solução do exercício
 
-import math
+def funcao(x):
+    unicos = []
+    
+    for i in range(len(x)):  
+        repetido = False
+        for j in range(len(x)):  
+            if i != j and x[i] == x[j]:  
+                repetido = True
+                break  
+        if not repetido:  
+            unicos.append(x[i])  
+    
+    return unicos
 
-x = float(input())
-y = float(input())
-
-distancia = math.sqrt(x**2 + y**2)
-
-print(f"{distancia:.2f}")
+# Pra rodar o programa
+x = []
+for i in range(10):
+    x.append(int(input("")))
+y = funcao(x)
+print(y)

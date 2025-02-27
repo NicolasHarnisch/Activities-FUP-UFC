@@ -20,3 +20,14 @@ def funcao(x):
     notas_1 = x // 1
     
     return notas_100, notas_50, notas_20, notas_10, notas_5, notas_2, notas_1
+
+# Pra rodar o Programa
+x = int(input(""))
+y1,y2,y3,y4,y5,y6,y7 = funcao(x)
+print(f"{y1}")
+print(f"{y2}")
+print(f"{y3}")
+print(f"{y4}")
+print(f"{y5}")
+print(f"{y6}")
+print(f"{y7}")

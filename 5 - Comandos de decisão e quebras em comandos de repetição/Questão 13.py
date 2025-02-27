@@ -1,15 +1,40 @@
 # Questão 13
-# Faça um programa que leia um número inteiro positivo de três dígitos (de 100 a 999). 
-# Gere outro número formado pelos dígitos invertidos do número lido. Exemplo: Número Lido = 123, Número Gerado = 321.
+# Calcule as raízes da equação do 2o grau. Lembrando que: x = (−b± √∆)/(2a), onde ∆ = b2 − 4ac, e  ax2 + bx + c = 0 representa uma equação do 2o grau. A variável a tem que ser diferente de zero. Caso seja igual, imprima a mensagem "Nao eh equacao do 2o grau".
+# ◦ Se ∆ < 0 , não existe raiz real. Imprima a mensagem “Nao existe raiz real”.
+# ◦ Se ∆ = 0 , existe uma raiz real. Imprima a raiz e a mensagem "Raiz unica".
+# ◦ Se ∆ > 0 , Imprima as duas raízes reais.
 
 # Solução do exercício
 
-numero = int(input())
+import math
 
-centena = numero // 100
-dezena = (numero % 100) // 10
-unidade = numero % 10
+def calcular_raizes(a, b, c):
+    if a == 0:
+        print("Nao eh equacao do 2o grau")
+        return
 
-numero_invertido = (unidade * 100) + (dezena * 10) + centena
+    delta = b**2 - 4 * a * c
 
-print(numero_invertido)
+    if delta < 0:
+        print("Nao existe raiz real")
+    elif delta == 0:
+        raiz = -b / (2 * a)
+        print(f"{raiz:.2f}")
+        print("Raiz unica")
+    else:
+        raiz1 = (-b + math.sqrt(delta)) / (2 * a)
+        raiz2 = (-b - math.sqrt(delta)) / (2 * a)
+
+        if raiz1 < raiz2:
+            print(f"{raiz1:.2f}")
+            print(f"{raiz2:.2f}")
+
+        else:
+            print(f"{raiz1:.2f}")
+            print(f"{raiz2:.2f}")
+
+a = float(input())
+b = float(input())
+c = float(input())
+
+calcular_raizes(a, b, c)

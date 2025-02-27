@@ -1,15 +1,22 @@
 # Questão 13
-# Faça um programa que leia um número inteiro positivo de três dígitos (de 100 a 999). 
-# Gere outro número formado pelos dígitos invertidos do número lido. Exemplo: Número Lido = 123, Número Gerado = 321.
+# Faça um programa que permita ao usuário entrar com uma matriz de 5 × 5 números reais. Em seguida, 
+# gere um vetor unidimensional contendo a soma dos números de cada coluna da matriz e mostre na tela esse vetor.
 
 # Solução do exercício
 
-numero = int(input())
+matriz = []
 
-centena = numero // 100
-dezena = (numero % 100) // 10
-unidade = numero % 10
+for i in range(5):
+    linha = []
+    for j in range(5):
+        linha.append(int(input()))
+    matriz.append(linha)
 
-numero_invertido = (unidade * 100) + (dezena * 10) + centena
+coluna = []
+for i in range(len(matriz[0])):
+    soma = 0
+    for j in range(len(matriz)):
+        soma += matriz[j][i]
+    coluna.append(soma)
 
-print(numero_invertido)
+print(coluna)

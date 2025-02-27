@@ -1,10 +1,18 @@
 # Questão 01
-# Crie um programa que permita fazer a conversão cambial entre Dólares e Reais. Considere como taxa de câmbio US$ 1,00 = R$5,27.
-# Leia um valor em Dólares pelo teclado e mostre o correspondente em Reais.
+# Leia uma matriz 4 × 4 , conte e escreva quantos valores maiores que 10 ela possui.
 
 # Solução do exercício
 
-taxa_de_cambio = 5.27
-valor_reais = float(input())
-reais = valor_reais * taxa_de_cambio
-print(f'{reais:.2f}')
+def main():
+    num = []
+    while len(num) < 16:
+        for p in input().split():
+            num.append(int(p))
+    m = [[num[i*4+j] for j in range(4)] for i in range(4)]
+    c = 0
+    for i in range(4):
+        for j in range(4):
+            if m[i][j] > 10:
+                c += 1
+    print(c)
+main()

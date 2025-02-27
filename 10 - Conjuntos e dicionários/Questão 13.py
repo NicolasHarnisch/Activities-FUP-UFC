@@ -1,15 +1,54 @@
 # Questão 13
-# Faça um programa que leia um número inteiro positivo de três dígitos (de 100 a 999). 
-# Gere outro número formado pelos dígitos invertidos do número lido. Exemplo: Número Lido = 123, Número Gerado = 321.
+# Peça ao usuário para digitar seus dados pessoais (Nome, Endereço, Data de Nascimento, Cidade, CEP, email), 
+# verifique se as informações de Data de Nascimento, CEP e email fazem sentido, e mostre ao usuário as informações, se estão todas corretas, 
+# ou mostre que alguma informação estava errada.
 
 # Solução do exercício
 
-numero = int(input())
+import re
 
-centena = numero // 100
-dezena = (numero % 100) // 10
-unidade = numero % 10
+def data_certa(dicionario):
+    fatiamento = dicionario['nascimento'].split('/')
+    if len(fatiamento[0]) == 2 and len(fatiamento[1]) == 2 and len(fatiamento[2]) == 4 and fatiamento[0].isdigit() and fatiamento[1].isdigit() and fatiamento[2].isdigit():
+        return True
+    else:
+        print('Data errada')
+        return False
 
-numero_invertido = (unidade * 100) + (dezena * 10) + centena
+def cep_certo(dicionario):
+    ifem = dicionario['cep'].replace('.', '-')
+    numerico = ifem.replace('-', '')
+    fatiamento = ifem.split('-')
+    if len(fatiamento[0]) == 2 and len(fatiamento[1]) == 3 and len(fatiamento[2]) == 3 and numerico.isdigit():
+        return True
+    else:
+        print('CEP errado')
+        return False
 
-print(numero_invertido)
+def email_certo(dicionario):
+    regex = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+    if re.match(regex, dicionario['email']):
+        return True
+    else:
+        print('E-mail errado')
+        return False
+
+def validardicionario(dicionario):
+    if not data_certa(dicionario):
+        return False
+    if not cep_certo(dicionario):
+        return False
+    if not email_certo(dicionario):
+        return False
+    return True
+
+dicionario = {}
+dicionario['nome'] = input()
+dicionario['endereco'] = input()
+dicionario['nascimento'] = input()
+dicionario['cidade'] = input()
+dicionario['cep'] = input()
+dicionario['email'] = input()
+
+if validardicionario(dicionario):
+    print(dicionario)

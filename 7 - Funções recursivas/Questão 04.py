@@ -1,8 +1,16 @@
 # Questão 04
-# Leia o tamanho do lado de um quadrado e imprima como resultado a sua área.
+# Crie uma função recursiva que receba dois inteiros positivos n e k e calcule nk.
 
 # Solução do exercício
 
-lado = float(input())
-area = lado ** 2
-print(f"{area:.2f}")
+def funcao(x1, x2):
+    if x2 == 0:
+        return 1
+    else:
+        return x1 * funcao(x1, x2 - 1)
+
+# Pra rodar o programa
+x1 = int(input(""))
+x2 = int(input(""))
+y = funcao(x1, x2)
+print(f"{y}")

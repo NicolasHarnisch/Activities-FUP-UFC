@@ -1,35 +1,28 @@
 # Questão 18
-# Escreva um programa que receba como entrada o valor do saque realizado pelo cliente de um banco e retorne quantas notas de cada valor 
-# serão necessárias para atender ao saque com a menor quantidade de notas possível. Serão utilizadas notas de 100, 50, 20, 10, 5, 2 e 1 real.
+# Gere uma matriz 5 × 5 com inteiros aleatórios no intervalo [1, 20], encontrados a partir de uma semente dada como entrada. 
+# Escreva um programa que transforme a matriz gerada numa matriz triangular inferior, ou seja, atribuindo zero a todos os elementos acima da diagonal principal. 
+# Imprima a matriz original e a matriz transformada. Não use nenhum comando de decisão (se/então/senão).
 
 # Solução do exercício
 
-valor_saque = int(input())
+import random
 
-notas_100 = valor_saque // 100
-valor_saque %= 100
+s = int(input())
+random.seed(s)
 
-notas_50 = valor_saque // 50
-valor_saque %= 50
+matriz = [[random.randint(1, 20) for _ in range(5)] for _ in range(5)]
+triangular = [[matriz[i][j] * (i >= j) for j in range(5)] for i in range(5)]
 
-notas_20 = valor_saque // 20
-valor_saque %= 20
+for i in range(5):
+    linha = ""
+    for j in range(5):
+        linha += str(matriz[i][j]) + " "
+    print(linha.strip())
 
-notas_10 = valor_saque // 10
-valor_saque %= 10
+print()
 
-notas_5 = valor_saque // 5
-valor_saque %= 5
-
-notas_2 = valor_saque // 2
-valor_saque %= 2
-
-notas_1 = valor_saque // 1
-
-print(f"{notas_100}")
-print(f"{notas_50}")
-print(f"{notas_20}")
-print(f"{notas_10}")
-print(f"{notas_5}")
-print(f"{notas_2}")
-print(f"{notas_1}")
+for i in range(5):
+    linha = ""
+    for j in range(5):
+        linha += str(triangular[i][j]) + " "
+    print(linha.strip())

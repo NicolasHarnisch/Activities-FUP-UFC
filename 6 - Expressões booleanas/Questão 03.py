@@ -1,10 +1,19 @@
 # Questão 03
-# Leia um número inteiro e imprima o seu antecessor e o seu sucessor.
+# Faça um programa que receba uma palavra e um caractere (vogal ou consoante) e imprima quantas vogais (a, e, i, o, u) possui essa palavra. 
+# Substitua todas as vogais da palavra dada pelo caractere dado, e imprima a nova palavra.
 
 # Solução do exercício
 
-Valor_digitado = int(input())                     
-Valor_antecessor = Valor_digitado - 1
-Valor_Sucessor = Valor_digitado + 1
-print(f'{Valor_antecessor}')
-print(f'{Valor_Sucessor}')
+stri = input()
+vogais = 'AEIOUaeiou'
+consoante = input()
+frase = ''
+contador = 0
+for letra in stri:
+    if letra not in vogais:
+        frase += letra
+    elif letra in vogais:
+        frase += consoante
+        contador += 1
+print(contador)
+print(frase)

@@ -10,3 +10,8 @@ def funcao(n):
         exp = exp ** j
     resultado_final = n ** exp
     return resultado_final
+
+# Pra rodar o programa
+x = int(input(""))
+y = funcao(x)
+print(f"{y}")

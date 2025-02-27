@@ -1,14 +1,22 @@
 # Questão 10
-# Faça a leitura de três valores e apresente como resultado a soma dos quadrados dos três valores e o quadrado da soma dos três valores.
+# Utilizando um dicionário, faça um programa que permita a entrada de nome, endereço e telefone de 5 pessoas e os imprima em ordem alfabética.
 
 # Solução do exercício
 
-a = float(input())
-b = float(input())
-c = float(input())
+dados = []
 
-soma_dos_quadrados = a**2 + b**2 + c**2
-quadrado_da_soma = (a + b + c)**2
-
-print(f"{soma_dos_quadrados:.2f}")
-print(f"{quadrado_da_soma:.2f}")
+for i in range(5):
+    dado = {}
+    dado['nome'] = input()
+    dado['endereco'] = input()
+    dado['telefone'] = input()
+    dados.append(dado)
+    
+for i in range(5):
+    for j in range(5):
+        dado1 = dados[i]
+        dado2 = dados[j]
+        if dado2['nome'] > dado1['nome']:
+            dados[i],dados[j] = dados[j], dados[i]
+for i in range(5):
+    print(dados[i])

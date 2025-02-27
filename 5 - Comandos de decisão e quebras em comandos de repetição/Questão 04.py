@@ -1,8 +1,18 @@
 # Questão 04
-# Leia o tamanho do lado de um quadrado e imprima como resultado a sua área.
+# Ler três valores e determinar o maior entre eles.
 
 # Solução do exercício
 
-lado = float(input())
-area = lado ** 2
-print(f"{area:.2f}")
+def maior_valor():
+    a = float(input())
+    b = float(input())
+    c = float(input())
+
+    if a > b and a > c:
+        print(f"{a:.2f}")
+    elif b > c:
+        print(f"{b:.2f}")
+    else:
+        print(f"{c:.2f}")
+
+maior_valor()

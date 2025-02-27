@@ -1,10 +1,18 @@
 # Questão 01
-# Crie um programa que permita fazer a conversão cambial entre Dólares e Reais. Considere como taxa de câmbio US$ 1,00 = R$5,27.
-# Leia um valor em Dólares pelo teclado e mostre o correspondente em Reais.
+# Implemente um programa que leia o nome, a idade e o endereço de uma pessoa e armazene os dados em um dicionário. Imprima o dicionário.
 
 # Solução do exercício
 
-taxa_de_cambio = 5.27
-valor_reais = float(input())
-reais = valor_reais * taxa_de_cambio
-print(f'{reais:.2f}')
+def coletar_dados():
+    nome = input()
+    while True:
+        idade = input()
+        if idade.isdigit():
+            idade = int(idade)
+            break
+    endereco = input()
+    return {"nome": nome, "idade": idade, "endereco": endereco}
+
+if __name__ == "__main__":
+    pessoa = coletar_dados()
+    print(pessoa)

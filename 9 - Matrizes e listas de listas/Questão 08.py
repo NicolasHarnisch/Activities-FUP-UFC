@@ -1,9 +1,17 @@
 # Quesão 08
-# Leia uma velocidade em km/h (quilômetros por hora) e apresente-a convertida em m/s (metros por segundo).
-# A fórmula de conversão é: M = K/3.6 , sendo K a velocidade em km/h e M em m/s.
+# Leia uma matriz 4 × 4. Calcule a soma dos elementos que estão acima da diagonal principal. 
+# Não use comandos nem funções do python ou de suas bibliotecas que já façam isso.
 
 # Solução do exercício
 
-temperatura = float(input())
-temperatura = F = temperatura * (9.0/5.0) + 32.
-print(f"{temperatura:.2f}")
+matriz = []
+
+for _ in range(4):
+    matriz.append([int(input()) for _ in range(4)])
+
+soma = 0
+for i in range(4):
+    for j in range(i + 1, 4):
+        soma += matriz[i][j]
+
+print(soma)

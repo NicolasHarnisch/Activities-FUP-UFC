@@ -1,11 +1,14 @@
 # Questão 09
-# Leia um ângulo em graus e apresente-o convertido em radianos. A fórmula de conversão é: R = G * π/180 , 
-# sendo G o ângulo em graus e R em radianos.
+# Leia uma matriz 4 × 4. Calcule a soma dos elementos que estão abaixo da diagonal principal. 
+# Não use comandos nem funções do python ou de suas bibliotecas que já façam isso.
 
 # Solução do exercício
 
-import math
+matriz = [[int(input()) for _ in range(4)] for _ in range(4)]
 
-angulo_graus = float(input())
-angulo_radianos = angulo_graus * math.pi / 180
-print(f"{angulo_radianos:.2f}")
+soma = 0
+for i in range(4):
+    for j in range(i):
+        soma += matriz[i][j]
+
+print(soma)

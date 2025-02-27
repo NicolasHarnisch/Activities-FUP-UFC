@@ -1,19 +1,18 @@
 # Questão 12
-
-# Faça um programa que receba um valor em R$ que será dividido entre três ganhadores de um concurso. Sendo que da quantia total:
-# ◦ O primeiro ganhador receberá 46%;
-# ◦ O segundo ganhador receberá 32%;
-# ◦ O terceiro receberá o restante;
-# Calcule e imprima a quantia ganha por cada um dos ganhadores.
+# Implemente a função h definida recursivamente por: h(m, n) = m + 1, se n = 1; h(m, n) = n + 1, se m = 1, h(m, n) = h(m, n − 1) + h(m − 1, n), se m > 1, n > 1.
 
 # Solução do exercício
 
-valor_total = float(input())
+def h(x1, x2):
+    if x2 == 1:
+        return x1 + 1
+    elif x1 == 1:
+        return x2 + 1
+    else:
+        return h(x1, x2 - 1) + h(x1 - 1, x2)
 
-primeiro_ganhador = valor_total * 0.46
-segundo_ganhador = valor_total * 0.32
-terceiro_ganhador = valor_total - (primeiro_ganhador + segundo_ganhador)
-
-print(f"{primeiro_ganhador:.2f}")
-print(f"{segundo_ganhador:.2f}")
-print(f"{terceiro_ganhador:.2f}")
+# Pra rodar o programa
+x1 = int(input(""))
+x2 = int(input(""))
+y = h(x1, x2)
+print(f"{y}")

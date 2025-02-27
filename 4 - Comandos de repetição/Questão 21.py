@@ -14,3 +14,7 @@ def funcao(n):
         espacos = n - i
         asteriscos = 2 * i - 1
         print(' ' * espacos + '*' * asteriscos)
+
+# Pra rodar o programa
+x = int(input(""))
+funcao(x)

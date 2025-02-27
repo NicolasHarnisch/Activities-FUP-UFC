@@ -10,3 +10,8 @@ def funcao(n):
 
         harmonicNumber += 1/i
     return harmonicNumber
+
+# Pra rodar o programa
+x = int(input(""))
+y = funcao(x)
+print(f"{y:.2f}")
