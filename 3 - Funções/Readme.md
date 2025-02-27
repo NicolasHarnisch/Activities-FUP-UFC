@@ -18,7 +18,7 @@
 - **Ordenação**: `sort`, `sorted`
 - **Expressões**: `lambda`
 
-## ❌ O que não pode usar nessa atividade:
+## ❌ O que **NÃO** pode usar nessa atividade:
 - **Comandos de repetição** (`while`, `for`)
 - **Comandos de decisão** (`if`, `else`, `elif`, `match`, `case`)
 - **Operadores relacionais** (`==`, `!=`, `<`, `<=`, `>`, `>=`)
