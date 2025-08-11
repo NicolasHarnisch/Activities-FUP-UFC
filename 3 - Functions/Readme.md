@@ -1,17 +1,16 @@
-# 🖥️ Fundamentals of Programming (FUP) - UFC
+# 📌 Assignment Rules
 
-This repository contains activities developed for the **Fundamentals of Programming (FUP)** course at the Federal University of Ceará (UFC).
-
-## 📌 Assignment Rules
-
-### ✅ What You Can Use:
+## ✅ What You Can Use:
 - **Allowed Library**: `math`
 - **Mandatory Operators and Concepts**:
   - Variables, strings, and the assignment operator (`=`)
   - Arithmetic operators (`+`, `-`, `*`, `/`, `//`, `%`, `**`)
 
-### 🚫 What You **CANNOT** Use:
-#### ❌ Forbidden Built-in Functions:
+## ⚠️ What You Must Use:
+- **Function definitions** (`def`)
+
+## ❌ What You Can Never Use:
+### 🚫 Forbidden Built-in Functions:
 - **Numeric**: `min`, `max`, `sum`
 - **Boolean**: `any`, `all`
 - **Structures**: `enumerate`, `map`, `reversed`
@@ -19,18 +18,18 @@ This repository contains activities developed for the **Fundamentals of Programm
 - **Sorting**: `sort`, `sorted`
 - **Expressions**: `lambda`
 
-#### ❌ Other Restrictions:
-- **Function definitions** (`def`)
+## ❌ What You **CANNOT** Use In This Activity:
 - **Loops** (`while`, `for`)
 - **Decision statements** (`if`, `else`, `elif`, `match`, `case`)
 - **Relational operators** (`==`, `!=`, `<`, `<=`, `>`, `>=`)
 - **Comparisons with more than two operands**
 - **Loop control** (`break`, `continue`)
 - **Boolean operators** (`and`, `or`, `not`)
-- **Recursion**
-- **Vectors, lists, tuples, and list comprehensions**
-- **Matrices, sets, or dictionaries**
+- **Recursive functions**
+- **Vectors, lists, tuples, or list comprehensions**
 - **The `random` library**
+- **Matrices**
+- **Sets or dictionaries**
 - **File manipulation**
 
 ## 🎯 Objective

@@ -1,22 +1,22 @@
-# Fundamentos de Programação (FUP) - UFC 🎓
+# Fundamentals of Programming (FUP) - UFC 🎓
 
-Este repositório contém atividades, exercícios e projetos desenvolvidos na disciplina de **Fundamentos de Programação (FUP)** na Universidade Federal do Ceará (UFC).
+This repository contains activities, exercises, and projects developed for the **Fundamentals of Programming (FUP)** course at the Federal University of Ceará (UFC).
 
-## 📌 Conteúdo  
-✅ Resolução de exercícios e desafios propostos na disciplina  
-✅ Implementações utilizando conceitos básicos de programação  
-✅ Aplicação de estruturas de controle, funções, matrizes e outros tópicos fundamentais  
+## 📌 Content
+✅ Solutions to exercises and challenges proposed in the course
+✅ Implementations using basic programming concepts
+✅ Application of control structures, functions, arrays, and other fundamental topics
 
-## 💻 Tecnologias utilizadas  
-- **Linguagem**: Python 
-- Conceitos de lógica de programação e estrutura de dados  
+## 💻 Technologies Used
+- **Language**: Python
+- Concepts of programming logic and data structures
 
-## 🚀 Objetivo  
-Aprimorar habilidades em programação e fortalecer a base para projetos mais avançados no futuro.  
+## 🚀 Objective
+To improve programming skills and strengthen the foundation for more advanced future projects.
 
-## 📩 Contato  
-Caso tenha sugestões ou dúvidas, fique à vontade para abrir uma **issue** ou entrar em contato!  
+## 📩 Contact
+If you have any suggestions or questions, feel free to open an **issue** or get in touch!
 
 ---
 
-🔹 *Repositório criado para acompanhar o aprendizado na disciplina de FUP - UFC.*
+🔹 *Repository created to track the learning progress in the FUP course at UFC.*
